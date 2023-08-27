@@ -1,0 +1,10 @@
+if %ZOOM && %SHOW_ZOOM_EFFECT
+	setSize #WIDTH, #HEIGHT
+	setCursor #WIDTH / 2, #HEIGHT / 2
+	setAlign #CENTER, #MIDDLE
+	// setColorToTeamColor %TEAM // team colored zoom
+	setColor 0 1 1 1 // simple cyan color
+	
+	setSize 800 * 1.777 * %VIDHEIGHT / %VIDWIDTH, 600
+	drawPicByName gfx/hud/zoom
+endif

@@ -1,0 +1,100 @@
+setFontFamily "Orbitron"
+setFontStyle Bold
+setFontSize %VIDHEIGHT / 28
+
+if %TEAM_ALPHA_SCORE != #NOTSET
+if %TEAM_BETA_SCORE != #NOTSET
+setAlign 3 1
+setCursor #WIDTH / 2, 0
+moveCursor 0 5
+setSize 20 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 20
+moveCursor -80 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+if %TEAM == #TEAM_ALPHA
+	setColor 0 0 0 1
+	drawStringNum %TEAM_ALPHA_SCORE
+	moveCursor 0, -1
+	drawStringNum %TEAM_ALPHA_SCORE
+	moveCursor 1, 0
+	drawStringNum %TEAM_ALPHA_SCORE
+	moveCursor 0, 1
+	drawStringNum %TEAM_ALPHA_SCORE
+	moveCursor -0.5, -0.5
+	setColorToTeamColor %TEAM
+	drawStringNum %TEAM_ALPHA_SCORE
+endif
+if %TEAM == #TEAM_BETA
+	setColor 0 0 0 1
+	drawStringNum %TEAM_BETA_SCORE
+	moveCursor 0, -1
+	drawStringNum %TEAM_BETA_SCORE
+	moveCursor 1, 0
+	drawStringNum %TEAM_BETA_SCORE
+	moveCursor 0, 1
+	drawStringNum %TEAM_BETA_SCORE
+	moveCursor -0.5, -0.5
+	setColorToTeamColor %TEAM
+	drawStringNum %TEAM_BETA_SCORE
+endif
+
+setAlign 1 1
+moveCursor 160 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+if %TEAM == #TEAM_ALPHA
+	setColor 0 0 0 1
+	drawStringNum %TEAM_BETA_SCORE
+	moveCursor 0, -1
+	drawStringNum %TEAM_BETA_SCORE
+	moveCursor 1, 0
+	drawStringNum %TEAM_BETA_SCORE
+	moveCursor 0, 1
+	drawStringNum %TEAM_BETA_SCORE
+	moveCursor -0.5, -0.5
+	setColorToTeamColor %TEAM_ENEMY
+	drawStringNum %TEAM_BETA_SCORE
+endif
+if %TEAM == #TEAM_BETA
+	setColor 0 0 0 1
+	drawStringNum %TEAM_ALPHA_SCORE
+	moveCursor 0, -1
+	drawStringNum %TEAM_ALPHA_SCORE
+	moveCursor 1, 0
+	drawStringNum %TEAM_ALPHA_SCORE
+	moveCursor 0, 1
+	drawStringNum %TEAM_ALPHA_SCORE
+	moveCursor -0.5, -0.5
+	setColorToTeamColor %TEAM_ENEMY
+	drawStringNum %TEAM_ALPHA_SCORE
+endif
+
+if %TEAM == #TEAM_SPECTATOR
+	setAlign 3 1
+	moveCursor -160 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	setColor 0 0 0 1
+	drawStringNum %TEAM_ALPHA_SCORE
+	moveCursor 0, -1
+	drawStringNum %TEAM_ALPHA_SCORE
+	moveCursor 1, 0
+	drawStringNum %TEAM_ALPHA_SCORE
+	moveCursor 0, 1
+	drawStringNum %TEAM_ALPHA_SCORE
+	moveCursor -0.5, -0.5
+	setColorToTeamColor #TEAM_ALPHA
+	drawStringNum %TEAM_ALPHA_SCORE
+
+	setAlign 1 1
+	moveCursor 160 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	setColor 0 0 0 1
+	drawStringNum %TEAM_BETA_SCORE
+	moveCursor 0, -1
+	drawStringNum %TEAM_BETA_SCORE
+	moveCursor 1, 0
+	drawStringNum %TEAM_BETA_SCORE
+	moveCursor 0, 1
+	drawStringNum %TEAM_BETA_SCORE
+	moveCursor -0.5, -0.5
+	setColorToTeamColor #TEAM_BETA
+	drawStringNum %TEAM_BETA_SCORE
+endif
+
+endif
+endif
+setFontStyle Normal

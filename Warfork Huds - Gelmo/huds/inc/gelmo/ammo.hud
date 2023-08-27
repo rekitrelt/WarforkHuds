@@ -1,0 +1,34 @@
+setCursor #WIDTH #HEIGHT
+moveCursor -40 * 1.333 * %VIDHEIGHT / %VIDWIDTH, -40
+if %WEAPON_ITEM
+	setAlign 3 2
+	setSize 48 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 48
+	drawWeaponIcon
+endif
+
+moveCursor -5 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 4
+if %INSTAGIB == 0
+	if %WEAPON_ITEM != #WEAP_GUNBLADE
+		if %AMMO
+			setColor 1 1 1 1
+			if %AMMO < %LOW_AMMO
+				setColor 1 0.6 0.6 1
+			endif
+			setAlign 2 1
+			setSize 24 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 24
+			setFontFamily "Orbitron"
+		    setFontSize %VIDHEIGHT / 30
+			setColor 0 0 0 1
+			drawStringNum %AMMO
+			moveCursor 0, -2
+			drawStringNum %AMMO
+			moveCursor 2, 0
+			drawStringNum %AMMO
+			moveCursor 0, 2
+			drawStringNum %AMMO
+			moveCursor -1, -1
+			setColor 1 1 1 1
+			drawStringNum %AMMO
+		endif
+	endif
+endif

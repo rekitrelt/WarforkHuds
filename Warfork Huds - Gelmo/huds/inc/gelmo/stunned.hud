@@ -1,0 +1,20 @@
+if %STUNNED
+setFontFamily "Lemon Milk"
+setFontSize %VIDHEIGHT / 50
+setColor 1 1 1 1
+setAlign 3 3
+setCursor #WIDTH, #HEIGHT / 4
+moveCursor 1 - 5 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 1
+moveCursor -2, 0
+setColor 0 0 0 1
+drawString "STUNNED"
+moveCursor 0, -1
+drawString "STUNNED"
+moveCursor 1, 0
+drawString "STUNNED"
+moveCursor 0, 1
+drawString "STUNNED"
+moveCursor -0.5, -0.5
+setColor 1 0 0 1
+drawString "STUNNED"
+endif
