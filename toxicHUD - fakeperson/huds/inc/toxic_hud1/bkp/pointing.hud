@@ -1,0 +1,8 @@
+// pointing
+setFontFamily "roboto"
+setFontStyle BOLD
+setFontSize %VIDHEIGHT / 60
+setColor 1 1 1 1
+setAlign #CENTER #MIDDLE
+setCursor #WIDTH / 2 #HEIGHT / 2 + 1000
+drawPointing

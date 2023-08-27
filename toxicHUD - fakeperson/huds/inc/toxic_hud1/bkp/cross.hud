@@ -1,0 +1,15 @@
+	setAlign #CENTER, #MIDDLE
+	setCursor #WIDTH / 2, #HEIGHT / 2		// do not replace by 400, 300 or it will be placed inacurately!
+	setSize 7.2, 0 //9.6
+	setColor 1, 1, 1, 1
+
+drawPicByName "gfx/hud/clown21/weapon/cross12345"
+
+
+
+
+
+
+
+
+

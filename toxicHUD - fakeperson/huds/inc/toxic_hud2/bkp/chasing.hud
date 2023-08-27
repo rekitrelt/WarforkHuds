@@ -1,0 +1,21 @@
+if %CHASING != #NOTSET
+	setAlign #RIGHT #BOTTOM
+	setCursor #WIDTH - 70 * 1.333 * %VIDHEIGHT / %VIDWIDTH, #HEIGHT - 5
+	setFontFamily "BigNoodleTooOblique" //"BigNoodleTooOblique"
+	setFontStyle italic
+	setFontSize %VIDHEIGHT / 25
+
+	//pro outline
+	//setColor 0.2 0.2 0.2 1
+	//drawCleanPlayerName %CHASING
+	//moveCursor 0, -1
+	//drawCleanPlayerName %CHASING
+	//moveCursor 1, 0
+	//drawCleanPlayerName %CHASING
+	//moveCursor 0, 1
+	//drawCleanPlayerName %CHASING
+	//moveCursor -0.5, -0.5
+
+	setColor 1 1 1 1
+	drawPlayerName %CHASING
+endif

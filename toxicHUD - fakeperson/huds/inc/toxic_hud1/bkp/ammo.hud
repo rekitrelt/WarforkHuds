@@ -1,0 +1,10 @@
+
+	//setFontFamily con_fontSystem
+	//setFontSize %VIDHEIGHT / 50
+	//if %WEAPON_ITEM
+	//	setColor 1 1 1 1
+	//	setSize 28 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 28
+	//	setAlign #CENTER, #MIDDLE
+	//	setCursor #WIDTH / 2, #HEIGHT - 54 // - 41		//setCursor #WIDTH / 2, #HEIGHT / 2
+	//	drawWeaponIcon
+	//endif

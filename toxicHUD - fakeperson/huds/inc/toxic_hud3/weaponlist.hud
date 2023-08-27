@@ -1,0 +1,40 @@
+if %INSTAGIB == 0
+  if %WEAPON_ITEM
+  
+  		setCustomWeaponIcons #ITEM_GUNBLADE 1 gfx/hud/11adem/weapons/gb
+		setCustomWeaponIcons #ITEM_MACHINEGUN 1 gfx/hud/guwashi/weapon/machinegun
+		setCustomWeaponIcons #ITEM_RIOTGUN 1 gfx/hud/guwashi/weapon/riot
+		setCustomWeaponIcons #ITEM_GRENADE_LAUNCHER 1 gfx/hud/guwashi/weapon/grenade
+		setCustomWeaponIcons #ITEM_ROCKET_LAUNCHER 1 gfx/hud/guwashi/weapon/rocket
+		setCustomWeaponIcons #ITEM_PLASMAGUN 1 gfx/hud/guwashi/weapon/plasma
+		setCustomWeaponIcons #ITEM_LASERGUN 1 gfx/hud/guwashi/weapon/laser
+		setCustomWeaponIcons #ITEM_ELECTROBOLT 1 gfx/hud/guwashi/weapon/electro
+		
+		//setCustomWeaponIcons #ITEM_GUNBLADE 0 gfx/hud/clown21/weapon/new/gunblade_nogun
+		//setCustomWeaponIcons #ITEM_MACHINEGUN 0 gfx/hud/clown21/weapon/new/machinegun_nogun
+		//setCustomWeaponIcons #ITEM_RIOTGUN 0 gfx/hud/clown21/weapon/new/riot_nogun
+		//setCustomWeaponIcons #ITEM_GRENADE_LAUNCHER 0 gfx/hud/clown21/weapon/new/grenade_nogun
+		//setCustomWeaponIcons #ITEM_ROCKET_LAUNCHER 0 gfx/hud/clown21/weapon/new/rocket_nogun
+		//setCustomWeaponIcons #ITEM_PLASMAGUN 0 gfx/hud/clown21/weapon/new/plasma_nogun
+		//setCustomWeaponIcons #ITEM_LASERGUN 0 gfx/hud/clown21/weapon/new/laser_nogun
+		//setCustomWeaponIcons #ITEM_ELECTROBOLT 0 gfx/hud/clown21/weapon/new/electro_nogun
+		
+    setCustomWeaponSelect gfx/hud/11adem/weapons/gb //"gfx/hud/x_timerpanel"
+    //	setAlign 2 2
+    setCursor 30 , 300  // 0.5 * #WIDTH + 35 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH
+
+
+    drawWeaponIcons 0 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 20, 24 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH 24	 //    drawWeaponIcons 24 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0, 21 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH 6
+
+    moveCursor 18 0
+    drawWeaponStrongAmmo 0 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 20, 8
+				setColor 1, 1, 1, 1.3
+				
+	if %WEAPON_ITEM == #ITEM_ROCKET_LAUNCHER
+		setCustomWeaponIcons #ITEM_ROCKET_LAUNCHER 1 gfx/hud/guwashi/weapons/rl7
+	endif
+
+			
+
+  endif
+endif
