@@ -1,0 +1,41 @@
+//background
+
+setAlign #CENTER, #MIDDLE
+setcursor 0 + #WIDTH / 2, 90 + #HEIGHT / 2
+setColor 0, 0, 0, 0.3
+setSize 70, 60
+	if %WEAPON_ITEM
+if %SHOW_SPEED != 6
+drawPicByName $whiteimage
+endif
+setFontFamily con_fontSystem
+setFontSize %VIDHEIGHT / 50
+
+	setAlign #LEFT, #MIDDLE
+	setColor 1 1 1 1
+	setSize 60 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 60
+	moveCursor -35, 0
+	drawWeaponIcon
+	setSize 20 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 20
+	moveCursor 18, -15
+	if %WEAPON_ITEM != #WEAP_GUNBLADE
+		if %AMMO >= 100
+			drawNum "0" + %AMMO
+			endif
+		if %AMMO < 100
+			setColor 0.8, 0.8, 0.8, 1
+			drawNum "0"
+			moveCursor 15, 0
+			if %AMMO > 9
+				setColor 1, 1, 1, 1
+				drawNum %AMMO
+			endif
+		endif
+		if %AMMO < 10 
+			setColor 0.8, 0.8, 0.8, 1
+			drawNum "0"
+			moveCursor 15, 0
+			setColor 1, 1, 1, 1
+			drawNum %AMMO
+		endif
+	endif

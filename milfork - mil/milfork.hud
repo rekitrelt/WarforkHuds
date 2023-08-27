@@ -1,0 +1,90 @@
+/* made by mil.
+Credz: Warsow Team, Scratch, joki, kuhjoe, clownFart, nasa, rekitrelt
+cg_showSpeed 1 - 
+cg_showSpeed 2 - draws speed between weaponlist and crosshair
+cg_showSpeed 3 - draws clock between weaponlist and crosshair moves speed back to the center bottom
+cg_showSpeed 4 -
+cg_showSpeed 5 -
+cg_showSpeed 6 - disables boxes
+*/
+
+setFontFamily con_fontSystem
+setFontSize con_fontSystemSmall
+
+setScale #DEFAULTSCALE
+if %MATCH_STATE < #MATCH_STATE_POSTMATCH
+include zoom
+include damage_indicator_screen
+include crosshair
+include damage_numbers
+include milfork/chat
+include milfork/clock
+include milfork/fps
+
+if %TUTORIAL == 0
+
+endif
+
+if %RACE == 0
+include milfork/ammo_current
+include milfork/health_armor
+include milfork/weaponlist
+include milfork/stunned
+include milfork/ammo_warning
+include milfork/obituaries
+include milfork/powerups
+
+if %TUTORIAL == 0
+
+include milfork/score
+include milfork/scores
+include milfork/team_info
+include milfork/team_image
+include milfork/team_message
+include milfork/team_progress
+include minimap
+include milfork/item_timers
+
+endif //if %TUTORIAL == 0
+endif //if %RACE == 0
+
+include strafe
+include milfork/chasing
+include pointing
+include milfork/download
+include net
+include milfork/speed
+include milfork/fps
+include help_message
+include milfork/picked_up_item
+include keystate
+include default/race_records
+include milfork/weaponwheel
+//include milfork/debug
+
+
+endif //if %MATCH_STATE < #MATCH_STATE_POSTMATCH
+
+include awards
+include milfork/chat
+
+//adds transparent dark background if scoreboard is shown
+if %SCOREBOARD == 1
+setCursor 0 0
+setAlign 0 0
+setSize 800 600
+setColor 0 0 0 0.3
+drawPicByName *whiteImage
+
+//adds the map name and id at the top when the scoreboard is shown
+setAlign #CENTER, #MIDDLE
+setcursor #WIDTH / 2, 80
+setColor 1, 1, 1, 1
+setSize 10 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 10
+
+moveCursor 0 * 1.333 * %VIDHEIGHT / %VIDWIDTH, -2
+drawStatString 5
+moveCursor 0 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 16
+drawStatString 6
+
+endif

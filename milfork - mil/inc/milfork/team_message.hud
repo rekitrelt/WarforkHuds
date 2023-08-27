@@ -1,0 +1,73 @@
+//
+// MESSAGE
+//
+if %RACE == 0
+if %HEALTH != #NOTSET
+if %SHOW_SPEED != 6
+	setAlign #CENTER, #MIDDLE
+	setcursor 110 + #WIDTH / 2, 80 + #HEIGHT / 2
+	setColor 0, 0, 0, 0.3
+	setSize 110, 60
+	drawPicByName $whiteimage
+endif
+endif
+endif
+
+if %MESSAGE_SELF
+	setColor 1 1 1 1
+	setCursor #WIDTH / 2, 380
+	setAlign 2 1
+	setFontFamily con_fontSystem
+	setFontSize con_fontSystemSmall
+	drawStatString %MESSAGE_SELF
+endif
+
+if %MESSAGE_OTHER
+	setColor 1 1 1 1
+	setCursor #WIDTH / 2, #HEIGHT / 2
+	setAlign 2 1
+	setFontFamily con_fontSystem
+	setFontSize con_fontSystemSmall
+	drawStatString %MESSAGE_OTHER
+endif
+
+//
+// Draw CA players remaining icons
+//
+// might rewrite
+
+setCursor #WIDTH / 2, 14
+if %MESSAGE_ALPHA
+		setSpecialFontFamily "Silhouette"
+		setFontSize %VIDHEIGHT / 22
+		setAlign #LEFT #MIDDLE
+		setColor 0 0 0 1
+moveCursor 75 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 355
+	if %MESSAGE_ALPHA >= 5 	//it always is
+		moveCursor 1 1
+		drawStringRepeatConfigString "?" %MESSAGE_ALPHA
+		setColorToTeamColor #TEAM_ALPHA
+		moveCursor -1 -1
+		drawStringRepeatConfigString "?" %MESSAGE_ALPHA
+	endif
+endif
+
+setCursor #WIDTH / 2, 14
+if %MESSAGE_BETA
+		setSpecialFontFamily "Silhouette"
+		setFontSize %VIDHEIGHT / 22
+		setAlign #LEFT #MIDDLE
+		setColor 0 0 0 1
+moveCursor 75 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 380
+	if %MESSAGE_BETA >= 5 	//it always is
+		moveCursor 1 1
+		drawStringRepeatConfigString "?" %MESSAGE_BETA
+		setColorToTeamColor #TEAM_BETA
+		moveCursor -1 -1
+		drawStringRepeatConfigString "?" %MESSAGE_BETA
+	endif
+endif
+//
+//
+//
+//
