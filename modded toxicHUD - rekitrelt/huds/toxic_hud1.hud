@@ -1,8 +1,7 @@
 /* made by adem
-Credz: Warsow Team, Scratch, joki, kuhjoe, clownFart, nasa
-cg_showSpeed 1 - draws speed at the center bottom
-cg_showSpeed 2 - draws speed between weaponlist and crosshair
-cg_showSpeed 3 - draws clock between weaponlist and crosshair moves speed back to the center bottom
+Credz: Warsow Team, Scratch, joki, kuhjoe, clownFart, nasa, rekitrelt
+cg_showSpeed 4-5 for crosshair 1 and 2
+cg_showSpeed 1-3 for no crosshair
 */
 
 setFontFamily con_fontSystem
