@@ -1,0 +1,13 @@
+//	setAlign #CENTER, #MIDDLE
+//	setCursor #WIDTH / 2, #HEIGHT / 2		// do not replace by 400, 300 or it will be placed inacurately!
+//	moveCursor 0, 130
+//	setSize 160, 800
+//	setColor 1, 1, 1, 1
+//
+//drawPicByName "gfx/hud/clown21/armor/gradient"
+
+
+
+
+
+

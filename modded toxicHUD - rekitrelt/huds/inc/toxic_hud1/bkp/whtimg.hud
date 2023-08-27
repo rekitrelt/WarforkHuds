@@ -1,0 +1,11 @@
+/if %TEAM != #TEAM_SPECTATOR
+//if %HEALTH != 0
+//	setAlign #CENTER, #MIDDLE
+//	setCursor #WIDTH / 2, #HEIGHT / 2		// do not replace by 400, 300 or it will be placed inacurately!
+//	moveCursor 0, 246
+//	setSize 1.2, 22 //1.2 22
+//	setColor 1, 1, 1, 1
+//
+//drawPicByName $whiteimage
+//endif
+//endif

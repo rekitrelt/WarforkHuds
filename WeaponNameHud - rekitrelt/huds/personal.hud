@@ -1,0 +1,92 @@
+/* made by personal
+Credz: Warsow Team, Scratch, joki, kuhjoe, clownFart, nasa
+cg_showSpeed 1 - draws speed at the center bottom
+cg_showSpeed 2 - draws speed between weaponlist and crosshair
+cg_showSpeed 3 - draws clock between weaponlist and crosshair moves speed back to the center bottom
+*/
+/*
+Credz:
+ - Warsow Team
+ - Scratch
+ - joki
+ - kuhjoe
+ - Jihnsius 4EXTREME BRA1NZ
+ - IRC for <3 and feedback
+ - clownFart for most of the work
+ - SiPlus for the touchscreen version
+*/
+
+setFontFamily con_fontSystem
+setFontSize con_fontSystemSmall
+
+setScale #personalSCALE
+if %MATCH_STATE < #MATCH_STATE_POSTMATCH
+include zoom
+include damage_indicator_screen
+include crosshair
+include damage_numbers
+include personal/minimap
+
+if %TUTORIAL == 0
+include personal/clock
+endif
+
+if %RACE == 0
+include personal/health_armor
+include personal/weaponlist
+include personal/ammo
+include personal/itemname
+
+if %TUTORIAL == 0
+
+include personal/scores
+include personal/scores_individual
+
+endif //if %TUTORIAL == 0
+
+include ammo_warning
+include personal/stunned
+include personal/obituaries
+include personal/powerups
+include personal/picked_up_item
+include personal/minimap
+
+if %TUTORIAL == 0
+include personal/team_info
+include personal/team_image
+include personal/team_message
+include personal/team_progress
+include personal/item_timers
+include personal/minimap
+
+endif //if %TUTORIAL == 0
+
+endif //if %RACE == 0
+
+include personal/chasing
+
+/* Race */
+include personal/race_records
+
+include strafe
+include personal/speed
+include personal/fps
+include help_message
+include download
+include personal/net
+include personal/pointing
+include keystate
+include weaponcross
+endif //if %MATCH_STATE < #MATCH_STATE_POSTMATCH
+
+include awards
+include chat
+
+//adds transparent dark background if scoreboard is shown
+if %SCOREBOARD == 1
+setCursor 0 0
+setAlign 0 0
+setSize 800 600
+setColor 0 0 0 0.3
+drawPicByName *whiteImage
+endif

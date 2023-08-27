@@ -1,0 +1,64 @@
+if %TEAM != #TEAM_SPECTATOR
+if %ARMOR >= 0
+setCursor #WIDTH / 2, #HEIGHT - 37 + 5 // - 41
+setFontSize %VIDHEIGHT / 20		//setFontSize 52 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 17
+setFontStyle bold
+setFontFamily oswald
+moveCursor 18, 9 - 2 //7 1
+setAlign 1 3 //3 3
+
+//pro outline
+//setColor 0 0 0 1
+//	drawStringNum %ARMOR
+//moveCursor 0, -1
+//	drawStringNum %ARMOR
+//moveCursor 1, 0
+//	drawStringNum %ARMOR
+//moveCursor 0, 1
+//	drawStringNum %ARMOR
+//moveCursor -0.5, -0.5
+
+/*
+setColor 1 1 1 1
+ if %ARMOR >= 0
+	setColor 1.0 0.2 0.3 1
+	if %ARMOR >= 150
+		setColor 1 1 1 1
+	endif
+endif //if %ARMOR > 0
+*/
+
+	if %WEAPON_ITEM == #ITEM_GUNBLADE
+		setColor 1 1 1 1
+	endif
+	if %WEAPON_ITEM == #ITEM_RIOTGUN
+		setColor .77 .41 .11 1
+	endif
+	if %WEAPON_ITEM == #ITEM_GRENADE_LAUNCHER
+		setColor 0 .5 1 1
+	endif
+	if %WEAPON_ITEM == #ITEM_ROCKET_LAUNCHER
+		setColor .87 .12 .18 1
+	endif
+	if %WEAPON_ITEM == #ITEM_PLASMAGUN
+		setColor .38 .85 .29 1
+	endif
+	if %WEAPON_ITEM == #ITEM_LASERGUN
+		setColor 1 1 0 1
+	endif
+	if %WEAPON_ITEM == #ITEM_ELECTROBOLT
+		setColor 0 .85 1 1
+	endif
+	if %WEAPON_ITEM == #ITEM_MACHINEGUN
+		setColor .65 .65 .65 1
+	endif
+if %WEAPON_ITEM != #ITEM_GUNBLADE
+drawStringNum %AMMO
+endif
+if %WEAPON_ITEM == #ITEM_GUNBLADE
+drawStringNum %ARMOR
+endif
+
+moveCursor +0.5, +0.5
+endif
+endif

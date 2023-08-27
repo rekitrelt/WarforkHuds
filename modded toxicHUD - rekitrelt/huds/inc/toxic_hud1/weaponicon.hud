@@ -1,0 +1,32 @@
+if %INSTAGIB == 0
+
+		setColor 1 1 1 1
+		setSize 28 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 28
+		setAlign #CENTER, #MIDDLE
+		setCursor #WIDTH / 2, #HEIGHT - 54 + 2 // - 41		//setCursor #WIDTH / 2, #HEIGHT / 2
+
+	if %WEAPON_ITEM == #ITEM_GUNBLADE
+		drawPicByName "gfx/hud/11adem/weapons/gb2"
+	endif
+	if %WEAPON_ITEM == #ITEM_RIOTGUN
+		drawPicByName "gfx/hud/11adem/weapons/rg3"
+	endif
+	if %WEAPON_ITEM == #ITEM_GRENADE_LAUNCHER
+		drawPicByName "gfx/hud/11adem/weapons/gl5"
+	endif
+	if %WEAPON_ITEM == #ITEM_ROCKET_LAUNCHER
+		drawPicByName "gfx/hud/11adem/weapons/rl6"
+	endif
+	if %WEAPON_ITEM == #ITEM_PLASMAGUN
+		drawPicByName "gfx/hud/11adem/weapons/pg4"
+	endif
+	if %WEAPON_ITEM == #ITEM_LASERGUN
+		drawPicByName "gfx/hud/11adem/weapons/lg"
+	endif
+	if %WEAPON_ITEM == #ITEM_ELECTROBOLT
+		drawPicByName "gfx/hud/11adem/weapons/eb4"
+	endif
+	if %WEAPON_ITEM == #ITEM_MACHINEGUN
+		drawPicByName "gfx/hud/11adem/weapons/mg3"
+	endif
+endif

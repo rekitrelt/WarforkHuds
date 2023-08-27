@@ -1,0 +1,22 @@
+setCursor #WIDTH #HEIGHT
+if %WEAPON_ITEM
+if %WEAPON_ITEM != #WEAP_GUNBLADE
+	moveCursor -70 * 1.333 * %VIDHEIGHT / %VIDWIDTH, -90
+	setColor 1 1 1 1
+	setFontStyle Bold
+	drawItemName %WEAPON_ITEM
+	setAlign #CENTER, #MIDDLE
+	setFontSize 5
+endif
+endif
+if %WEAPON_ITEM
+if %WEAPON_ITEM == #WEAP_GUNBLADE
+	moveCursor -40 * 1.333 * %VIDHEIGHT / %VIDWIDTH, -83
+	setColor 1 1 1 1
+	setFontStyle Bold
+	drawItemName %WEAPON_ITEM
+	setAlign #CENTER, #MIDDLE
+	setFontSize 5
+endif
+endif
+setFontStyle Normal
