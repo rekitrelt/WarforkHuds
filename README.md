@@ -7,7 +7,7 @@ or another way to get to the same folder:
 
 > This PC > Documents > my games > warfork 2.1 > basewf
 
-### [Preview Huds](https://github.com/rekitrelt/WarforkHuds/blob/main/Hud%20previews/README.md)
+## [Preview Huds](https://github.com/rekitrelt/WarforkHuds/blob/main/Hud%20previews/README.md)
 ## Hud Downloads:
 
 [bwHUD - margarinoslv](https://github.com/rekitrelt/WarforkHuds/releases/download/Release/bwHUD-margarinoslv.zip)
