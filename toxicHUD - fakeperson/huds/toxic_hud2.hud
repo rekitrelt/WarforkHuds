@@ -1,0 +1,74 @@
+/* made by adem
+Credz: Warsow Team, Scratch, joki, kuhjoe, clownFart, nasa
+cg_showSpeed 1 - draws speed at the center bottom
+cg_showSpeed 2 - draws speed between weaponlist and crosshair
+cg_showSpeed 3 - draws clock between weaponlist and crosshair moves speed back to the center bottom
+*/
+
+setFontFamily con_fontSystem
+setFontSize con_fontSystemSmall
+
+setScale #DEFAULTSCALE
+if %MATCH_STATE < #MATCH_STATE_POSTMATCH
+//include toxic_hud2/gradient
+include zoom
+include damage_indicator_screen
+include crosshair
+include toxic_hud2/damage_numbers
+
+if %TUTORIAL == 0
+include toxic_hud2/clock
+endif
+
+if %RACE == 0
+include toxic_hud2/hp
+include toxic_hud2/ap
+include toxic_hud2/ammo
+include toxic_hud2/stunned
+include toxic_hud2/ammo_warning
+include toxic_hud2/obituaries
+include toxic_hud2/powerups
+include toxic_hud2/weaponlist
+include toxic_hud2/weaponicon
+
+if %TUTORIAL == 0
+
+
+include toxic_hud2/scores
+include toxic_hud2/team_info
+include toxic_hud2/team_image
+include toxic_hud2/team_message
+include toxic_hud2/team_progress
+include minimap
+include toxic_hud2/item_timers
+include toxic_hud2/whtimg
+
+endif //if %TUTORIAL == 0
+endif //if %RACE == 0
+
+include toxic_hud2/cross
+include toxic_hud2/strafe
+include toxic_hud2/chasing
+include toxic_hud2/pointing
+include toxic_hud2/download
+include net
+include toxic_hud2/speed
+include toxic_hud2/fps
+include help_message
+include toxic_hud2/picked_up_item
+include keystate
+include default/race_records
+
+endif //if %MATCH_STATE < #MATCH_STATE_POSTMATCH
+
+include toxic_hud2/awards
+include toxic_hud2/chat
+
+//adds transparent dark background if scoreboard is shown
+if %SCOREBOARD == 1
+setCursor 0 0
+setAlign 0 0
+setSize 800 600
+setColor 0 0 0 0.3
+drawPicByName *whiteImage
+endif
