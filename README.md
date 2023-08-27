@@ -1,4 +1,12 @@
 # All Custom Warfork Huds
+## How to install the huds
+put all the zipped files into your
+> C:\Users\YOURUSER\Documents\my games\warfork 2.1\basewf
+
+or another way to get to the same folder:
+
+> This PC > Documents > my games > warfork 2.1 > basewf
+
 ### [Preview Huds](https://github.com/rekitrelt/WarforkHuds/blob/main/Hud%20previews/README.md)
 ## Hud Downloads:
 
