@@ -1,0 +1,20 @@
+// thanks to nasa
+if %SCOREBOARD == 0
+if %INSTAGIB == 0
+if %WEAPON_ITEM
+if %WEAPON_ITEM != #WEAP_GUNBLADE
+
+	setAlign #CENTER #MIDDLE
+	setColor 1 0 0 1
+
+	// === low ammo warning ===
+	if %LOW_AMMO > %AMMO
+	    setSize 12 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 12
+		setCursor #WIDTH / 2, -125 + #HEIGHT / 2
+		drawString "LOW AMMO WARNING"
+	endif
+
+endif
+endif
+endif
+endif

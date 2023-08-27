@@ -1,0 +1,14 @@
+setCursor 0, 0
+if %TEAM != #TEAM_SPECTATOR
+	precache gfx/hud/adem/weapbox
+	if %WEAPON_ITEM
+		if %INSTAGIB == 0
+			setCustomWeaponSelect gfx/hud/adem/weapbox
+			setAlign 1, 2
+			setCursor 0, #HEIGHT / 2
+			drawWeaponIcons 0, 28, 22 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 22
+			moveCursor 25 * 1.333 * %VIDHEIGHT / %VIDWIDTH,  0
+			drawWeaponStrongAmmo 0, 28, 16
+		endif
+	endif
+endif

@@ -1,0 +1,128 @@
+if %TEAM != #TEAM_SPECTATOR
+if %INSTAGIB == 0
+
+setColor 1 1 1 1
+setCursor #WIDTH / 2, #HEIGHT - 40
+setAlign 2, 2
+
+// current weapon
+if %WEAPON_ITEM
+    setSize 22 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 22
+    drawWeaponIcon
+    if %WEAPON_ITEM != #WEAP_GUNBLADE
+    if %AMMO
+	    moveCursor 0, -25
+        setSize 18 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 18
+        if %LOW_AMMO > %AMMO
+            setColor 1 0 0 1
+        endif
+        drawNum %AMMO
+    endif
+    endif
+endif
+
+
+if %HEALTH != #NOTSET
+    // health bar
+    setCursor #WIDTH / 2, #HEIGHT - 40
+   	moveCursor -40 * 1.333 * %VIDHEIGHT / %VIDWIDTH, -25
+    setAlign 3, 2
+    setColor 1 1 1 1
+	setSize 188 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 10
+	setColor 0 0 0 0.2
+    drawPicBar 100, 100, gfx/black
+    setColor 1 1 1 1
+	drawPicBar %HEALTH, 200, gfx/black
+    setColor 1 0 0 1
+    setSize 188 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 1
+   	moveCursor 0, 5
+    drawPicBar 100, 100, gfx/black
+
+
+    setCursor #WIDTH / 2, #HEIGHT - 40
+    moveCursor -45 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+    setSize 24 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 24 //icon size
+        
+	if %HEALTH > 100
+		drawPicByItemIndex #ITEM_MEGA_HEALTH
+		setColor 1 0.3 1 1
+	endif
+	if %HEALTH == 100
+		drawPicByItemIndex #ITEM_50_HEALTH
+		setColor 0.2 0.7 1 1
+	endif
+	if %HEALTH < 100
+                if %HEALTH >= 50
+                        drawPicByItemIndex #ITEM_50_HEALTH
+                        setColor 0.9 0.8 0.3 1
+		endif
+	endif
+	if %HEALTH < 50
+                if %HEALTH >= 25
+                        drawPicByItemIndex #ITEM_25_HEALTH
+                        setColor 0.9 0.4 0.3 1
+                endif
+	endif
+        if %HEALTH < 25
+                drawPicByItemIndex #ITEM_5_HEALTH
+                setColor 0.9 0.2 0.1 1
+	endif
+	
+	setSize 28 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 28 //number size
+	moveCursor -30 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawNum %HEALTH
+
+endif //if %HEALTH != #NOTSET
+
+
+// armor bar
+setCursor #WIDTH / 2, #HEIGHT - 40
+moveCursor 40 * 1.333 * %VIDHEIGHT / %VIDWIDTH, -25
+setAlign 1, 2
+setColor 1 1 1 1
+setSize 188 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 10
+setColor 0 0 0 0.2
+drawPicBar 100, 100, gfx/black
+setColor 1 1 1 1
+drawPicBar %ARMOR, 200, gfx/black
+setColor 1 0 0 1
+setSize 188 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 1
+moveCursor 0, 5
+drawPicBar 100, 100, gfx/black
+
+setCursor #WIDTH / 2, #HEIGHT - 40
+setAlign 2 2
+moveCursor 55 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+setSize 24 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 24 //icon size
+        
+if %ARMOR < 50
+    drawPicByItemIndex #ITEM_ARMOR_SHARD
+    setColor 1 1 1 1
+endif
+if %ARMOR >= 50
+    if %ARMOR < 100
+        drawPicByItemIndex #ITEM_GREEN_ARMOR
+        setColor 0.3 0.9 0.3 1
+    endif
+endif
+if %ARMOR >= 100
+    if %ARMOR < 125
+        drawPicByItemIndex #ITEM_YELLOW_ARMOR
+        setColor 1 0.9 0.2 1
+    endif
+endif
+if %ARMOR >= 125
+    drawPicByItemIndex #ITEM_RED_ARMOR
+    setColor 1.0 0.25 0.3 1
+    if %ARMOR >= 150
+        setColor 1.0 0.15 0.35 1
+    endif
+endif
+	
+setSize 28 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 28 //number size
+setAlign 1 2
+moveCursor 15 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+drawNum %ARMOR
+
+endif //if %INSTAGIB == 0
+endif //if %TEAM != #TEAM_SPECTATOR
