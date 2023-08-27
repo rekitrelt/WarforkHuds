@@ -1,0 +1,15 @@
+setcursor #width / 2 #height / 2
+movecursor 60 45
+setfontfamily virtue
+setalign #left #middle
+setfontsize 25 * %vidheight / #height
+setsize 25 * #height / #width 25
+setcolor 0 0 0 1
+drawpicbyitemindex %weapon_item
+movecursor 0 - 1 - 25 * #height / #width 0 - 1
+if %weapon_item != 1
+    drawstringnum %ammo
+    movecursor 1 1
+    setcolor 1 1 1 1
+    drawstringnum %ammo
+endif

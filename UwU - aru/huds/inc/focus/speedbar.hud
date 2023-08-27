@@ -1,0 +1,32 @@
+setcursor #width / 2 #height / 2
+movecursor 0 - 25 * %vidwidth / %vidheight 80
+setalign #left #top
+setsize 50 * %vidwidth / %vidheight 8
+setcolor 0 0 0 0.35
+drawpicbyname $whiteimage
+setcolor 1 1 1 0.5
+drawbar %speed 2000
+
+if %ACCELERATION != #NOTSET
+    if %acceleration < %speed
+        if %acceleration > 0
+            if %speed < 2000
+                // 0.0005 = 1 / 2000
+                movecursor %speed * 0.0005 * 50 * %vidwidth / %vidheight 0
+            endif
+            if %speed >= 2000
+                movecursor 50 * %vidwidth / %vidheight 0
+            endif
+                setalign #right #top
+                setcolor 0 1 0 0.35
+                drawbar 0 + %acceleration 2000
+        endif
+    endif
+    if %acceleration < 0
+        if 0 - %acceleration < %speed
+            setcolor 1 0 0 0.35
+            setalign #left #top
+            drawbar 0 - %acceleration 2000 * 10
+        endif
+    endif
+endif

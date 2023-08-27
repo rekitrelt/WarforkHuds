@@ -1,0 +1,76 @@
+/*
+
+Wow this is a crappy HUD that aru made.
+Don't use it.
+It'll make u worse at the game.
+
+This hud has some optional features. If you want, you can remove the // in front
+of some include statements to change different elements of the HUD. There will
+also be text provided to help.
+
+For example, for health vs health_down, health is enabled by default. add // in
+front of health and remove it from health_down to lower your health/armor text.
+
+*/
+
+                                setScale #DEFAULTSCALE
+
+                                if %scoreboard == 0
+
+/********************************************************************************/
+/* Use health_down for a lowered health/armor text, otherwise use health.
+/********************************************************************************/
+include focus/health
+//include focus/health_down
+
+                                include focus/crosshair
+                                include focus/keystate
+                                include focus/speed
+
+/********************************************************************************/
+/* If you wish to have a bar that shows speed and acceleration, enable this.
+/* Note that the acceleration will only show during warmup.
+/********************************************************************************/
+//include focus/speedbar
+
+                                if %instagib == 0
+
+/********************************************************************************/
+/* Use current_down for a lowered weapon icon and ammo text, otherwise use
+/* current.
+/********************************************************************************/
+include focus/current
+//include focus/current_down
+
+                                include focus/weapons
+                                endif
+                                endif
+                                if %match_state == #match_state_playtime
+
+/********************************************************************************/
+/* If you wish to have a text-based player counter, use players. Otherwise, use
+/* players_graphical.
+/********************************************************************************/
+include focus/players
+//include focus/players_graphical
+
+/********************************************************************************/
+/* If you chose the graphical player counter, use timer. Otherwise, use
+/* timer_down. You can also completely disable the timer by putting // in front
+/* of both of them. Note that this does not currently work for the race mode.
+/********************************************************************************/
+//include focus/timer_down
+//include focus/timer
+
+                                include focus/score
+                                endif
+                                if %chasing != #notset
+                                include focus/chasing
+                                endif
+                                include focus/chat
+                                include focus/damage_indicator
+                                include focus/obituaries
+                                include focus/team_indicators
+                                include focus/awards
+                                include focus/damage_numbers
+                                include focus/pointing

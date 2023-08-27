@@ -1,0 +1,6 @@
+setfontfamily virtue
+setfontsize %vidheight / 36
+setcolor 1 1 1 0.8
+setcursor 10 10
+setalign #left, #top
+drawplayername %chasing

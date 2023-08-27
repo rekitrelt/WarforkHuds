@@ -1,0 +1,5 @@
+if %weapon_item
+    setalign #center #middle
+    setcursor #width / 2 #height / 2
+    drawcrosshair
+endif

@@ -1,0 +1,35 @@
+setcursor 0 - 30 - #width / 2 25
+setfontfamily silhouette
+setfontsize 20 * %vidheight / #height
+setalign #right #middle
+setcolor 0 0 0 1
+if %team == #team_alpha
+    movecursor -1 -1
+    drawstringrepeatconfigstring "?" %message_alpha
+    setcolortoteamcolor #team_alpha
+    movecursor 1 1
+    drawstringrepeatconfigstring "?" %message_alpha
+    setcolor 0 0 0 1
+    movecursor 60 0
+    setalign #left #middle
+    movecursor -1 -1
+    drawstringrepeatconfigstring "?" %message_beta
+    setcolortoteamcolor #team_beta
+    movecursor 1 1
+    drawstringrepeatconfigstring "?" %message_beta
+endif
+if %team == #team_beta
+    movecursor -1 -1
+    drawstringrepeatconfigstring "?" %message_beta
+    setcolortoteamcolor #team_beta
+    movecursor 1 1
+    drawstringrepeatconfigstring "?" %message_beta
+    setcolor 0 0 0 1
+    movecursor 60 0
+    setalign #left #middle
+    movecursor -1 -1
+    drawstringrepeatconfigstring "?" %message_alpha
+    setcolortoteamcolor #team_alpha
+    movecursor 1 1
+    drawstringrepeatconfigstring "?" %message_alpha
+endif

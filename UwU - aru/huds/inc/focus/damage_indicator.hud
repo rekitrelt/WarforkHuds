@@ -1,0 +1,30 @@
+setcolor 1 0 1 0.4
+
+if %damage_indicator_left > 0
+    setalign #left #middle
+    setcursor #width / 2 #height / 2
+    movecursor 0 - 30 * #height / #width 0
+    setsize 4 * #height / #width 20
+    drawpicbyname $whiteimage
+endif
+if %damage_indicator_right > 0
+    setalign #right #middle
+    setcursor #width / 2 #height / 2
+    movecursor 30 * #height / #width 0
+    setsize 4 * #height / #width 20
+    drawpicbyname $whiteimage
+endif
+if %damage_indicator_top > 0
+    setalign #center #top
+    setcursor #width / 2 #height / 2
+    movecursor 0 0 - 30
+    setsize 20 * #height / #width 4
+    drawpicbyname $whiteimage
+endif
+if %damage_indicator_bottom > 0
+    setalign #center #bottom
+    setcursor #width / 2 #height / 2
+    movecursor 0 30
+    setsize 20 * #height / #width 4
+    drawpicbyname $whiteimage
+endif

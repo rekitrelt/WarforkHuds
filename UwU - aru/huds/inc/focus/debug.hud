@@ -1,0 +1,7 @@
+setAlign #LEFT #TOP
+setCursor 10 10
+setColor 1 0 0 1
+setFontSize 30
+setFontFamily Virtue
+
+drawstatstring %team

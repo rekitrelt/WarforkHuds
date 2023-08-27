@@ -1,0 +1,7 @@
+setfontfamily virtue
+setfontsize %vidheight / 50
+setalign #left #top
+setsize #width / 3 180
+setcursor 2 * #width / 3 #height - 180
+
+drawchat 1 1 "gfx/2d/chat1"

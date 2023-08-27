@@ -1,0 +1,11 @@
+setcursor #width / 2 10
+movecursor 0 15
+setalign #center #top
+setfontfamily virtue
+setfontsize 20 * %vidheight / #height
+movecursor -1 -1
+setcolor 0 0 0 1
+drawClock
+movecursor 1 1
+setcolor 1 1 1 1
+drawClock

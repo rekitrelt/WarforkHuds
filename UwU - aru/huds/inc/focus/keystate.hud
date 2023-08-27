@@ -1,0 +1,14 @@
+setalign #left #top
+setsize 32 * 1.333 * %vidheight / %vidwidth 32
+setcursor #width - 32 * 1.333 * %vidheight / %vidwidth 0 - 32 - #height / 2
+drawkeystate special
+movecursor 0 - 32 * 1.333 * %vidheight / %vidwidth 0
+drawkeystate jump
+movecursor 0 - 32 * 1.333 * %vidheight / %vidwidth 0
+drawkeystate fire
+movecursor 0 32
+drawkeystate left
+movecursor 32 * 1.333 * %vidheight / %vidwidth 0
+drawkeystate forward
+movecursor 32 * 1.333 * %vidheight / %vidwidth 0
+drawkeystate right

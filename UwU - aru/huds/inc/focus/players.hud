@@ -1,0 +1,23 @@
+setcursor #width / 2 0
+movecursor -10 10
+setfontsize 30 * #height / %vidheight
+setfontfamily virtue
+
+if %team == #team_alpha
+    setcolortoteamcolor #team_alpha
+    setalign #right #top
+    drawstatstring %message_alpha
+    movecursor 20 0
+    setcolortoteamcolor #team_beta
+    setalign #left #top
+    drawstatstring %message_beta
+endif
+if %team == #team_beta
+    setcolortoteamcolor #team_beta
+    setalign #right #top
+    drawstatstring %message_beta
+    movecursor 20 0
+    setcolortoteamcolor #team_alpha
+    setalign #left #top
+    drawstatstring %message_alpha
+endif

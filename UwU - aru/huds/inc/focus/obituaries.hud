@@ -1,0 +1,5 @@
+setcursor #width - 10 10
+setalign #right #top
+setfontsize 20
+setfontfamily virtue
+drawobituaries 0 20

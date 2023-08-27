@@ -1,0 +1,21 @@
+setcursor #width / 2 #height / 2
+movecursor -60 33
+
+setalign #right #top
+movecursor -1 -1
+setfontfamily virtue
+
+setfontsize 15 * %vidheight / #height
+setcolor 0 0 0 1
+drawstringnum %health
+movecursor 1 1
+setcolor %health %health / 100 %health / 50 1
+drawstringnum %health
+
+movecursor 0 - 1 15
+setfontsize 10 * %vidheight / #height
+setcolor 0 0 0 1
+drawstringnum %armor
+movecursor 1 1
+setcolor %armor / 150 %armor / 150 1 1
+drawstringnum %armor

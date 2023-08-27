@@ -1,0 +1,10 @@
+setcursor #width / 2 #height / 2
+movecursor 0 60
+setalign #center #top
+setfontsize 15 * %vidheight / #height
+movecursor -1 -1
+setcolor 0 0 0 1
+drawstringnum %speed
+movecursor 1 1
+setcolor 0 1 0 1
+drawstringnum %speed

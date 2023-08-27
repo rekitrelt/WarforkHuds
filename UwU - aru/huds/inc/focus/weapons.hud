@@ -1,0 +1,17 @@
+// iconsize = 25
+// iconoffset = 3
+// ammofontsize = 10
+
+if %weapon_item
+    // setalign #left, #top
+    // setcursor 0, #height - (4 * (iconsize + iconoffset))
+    // drawweaponicons 0, iconsize + iconoffset, iconsize * heightwidth, iconsize
+    // movecursor 0, iconsize - ammofontsize
+    // drawweaponstrongammo iconsize + iconoffset, 0, ammofontsize
+
+    setalign #left #top
+    setcursor 0 #height - 4 * 28
+    drawweaponicons 0 28 25 * 1.333 * %vidheight / %vidwidth 25
+    movecursor 0 15
+    drawweaponstrongammo 0 28 10
+endif
