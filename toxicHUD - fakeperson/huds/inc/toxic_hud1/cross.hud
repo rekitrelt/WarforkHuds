@@ -4,8 +4,13 @@
 	setColor 0.8, 0.8, 0.8, 1
 	setRotationSpeed 322, 32, 32
 
-drawRotatedPicByName "gfx/hud/11adem/cross/cross2" 360
 
+if %SHOW_SPEED == 4
+drawRotatedPicByName "gfx/hud/11adem/cross/cross1" 360
+endif
+if %SHOW_SPEED == 5
+drawRotatedPicByName "gfx/hud/11adem/cross/cross2" 360
+endif
 
 
 
