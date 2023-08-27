@@ -1,7 +1,7 @@
 # AllWarforkHuds
 all custom huds for Warfork
 
-if you wanna preview what the hud looks like go [here](https://github.com/rekitrelt/WarforkHuds/blob/main/Hud%20previews/README.md)
+if you wanna preview what the huds looks like go [here](https://github.com/rekitrelt/WarforkHuds/blob/main/Hud%20previews/README.md)
 
 you can download the huds from either the release page ->
 
