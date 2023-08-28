@@ -15,7 +15,7 @@ or another way to get to the same folder:
 [cpmaHUD - Maarten](https://github.com/rekitrelt/WarforkHuds/releases/download/Release/cpmaHUD-Maarten.rar)
 
 [Focus - aru](https://github.com/rekitrelt/WarforkHuds/releases/download/Release/Focus-aru.zip)
-edit huds/focus.hud for extra configuration
+`edit huds/focus.hud for extra configuration`
 
 [Moxic - rekitrelt](https://github.com/rekitrelt/WarforkHuds/releases/download/Release/moxic-rekitrelt.zip)
 
