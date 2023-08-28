@@ -20,6 +20,6 @@ or another way to get to the same folder:
 
 [ToxicHUD - fakeperson](https://github.com/rekitrelt/WarforkHuds/releases/download/Release/toxicHUD-fakeperson.zip)
 
-[WarforkHuds - Gelmo](https://github.com/rekitrelt/WarforkHuds/releases/download/Release/WarforkHuds-Gelmo.zip)
+[Gelmo - Gelmo](https://github.com/rekitrelt/WarforkHuds/releases/download/Release/WarforkHuds-Gelmo.zip)
 
 [WeaponNameHud - rekitrelt](https://github.com/rekitrelt/WarforkHuds/releases/download/Release/WeaponNameHud-rekitrelt.zip)
