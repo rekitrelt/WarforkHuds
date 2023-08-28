@@ -1,4 +1,4 @@
-![image](https://github.com/rekitrelt/WarforkHuds/assets/67936854/c6b35790-e609-4c3c-a665-beae16968fd1)# All Custom Warfork Huds
+# All Custom Warfork Huds
 ## How to install the huds
 put all the zipped files into your
 > C:\Users\YOURUSER\Documents\my games\warfork 2.1\basewf
