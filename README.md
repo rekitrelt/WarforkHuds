@@ -31,7 +31,7 @@ or another way to get to the same folder:
 ### Moxic - rekitrelt:
 ![alt text](https://github.com/rekitrelt/WarforkHuds/blob/main/Hud%20previews/Moxic.png?raw=true)
 ### bwHUD - margarinoslv:
-![alt text](https://github.com/rekitrelt/WarforkHuds/blob/main/Hud%20previews/bwHUD.png?raw=true)
+![alt text](https://user-images.githubusercontent.com/79981890/263778903-dcd87d51-9aa5-41f8-af00-b251fdf4974a.jpg)
 ### Focus - aru:
 ![alt text](https://github.com/rekitrelt/WarforkHuds/blob/main/Hud%20previews/Focus.jpg?raw=true)
 ### cpmaHUD - Maarten:
