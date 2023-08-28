@@ -1,4 +1,4 @@
-# [Back](https://github.com/rekitrelt/WarforkHuds/)
+# [Back](https://github.com/rekitrelt/WarforkHuds)
 
 # Hud Previews
 
