@@ -1,6 +1,6 @@
-## [Back](https://github.com/rekitrelt/WarforkHuds)
+### [Back](https://github.com/rekitrelt/WarforkHuds)
 
-# Hud Previews
+# Hud Previews:
 
 ### Milfork - Mil:
 ![alt text](https://github.com/rekitrelt/WarforkHuds/blob/main/Hud%20previews/milfork.jpg?raw=true)
