@@ -10,7 +10,7 @@ or another way to get to the same folder:
 ## [Preview Huds](https://github.com/rekitrelt/WarforkHuds/blob/main/Hud%20previews/README.md)
 ## Hud Downloads:
 
-[bwHUD - margarinoslv](https://github.com/rekitrelt/WarforkHuds/releases/download/Release/bwHUD-margarinoslv.zip)
+[bwHUD - margarinoslv](https://github.com/margarinoslv/bwHUD/archive/refs/heads/main.zip)
 
 [cpmaHUD - Maarten](https://github.com/rekitrelt/WarforkHuds/releases/download/Release/cpmaHUD-Maarten.rar)
 
