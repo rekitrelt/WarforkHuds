@@ -1,4 +1,4 @@
-# All Custom Warfork Huds
+![image](https://github.com/rekitrelt/WarforkHuds/assets/67936854/c6b35790-e609-4c3c-a665-beae16968fd1)# All Custom Warfork Huds
 ## How to install the huds
 put all the zipped files into your
 > C:\Users\YOURUSER\Documents\my games\warfork 2.1\basewf
@@ -36,7 +36,15 @@ or another way to get to the same folder:
 ![alt text](https://github.com/rekitrelt/WarforkHuds/blob/main/Hud%20previews/Focus.jpg?raw=true)
 ### cpmaHUD - Maarten:
 ![alt text](https://github.com/rekitrelt/WarforkHuds/blob/main/Hud%20previews/cpma.jpg?raw=true)
-### ToxicHUD - fakeperson:
-[in the warfork discord](https://discord.com/channels/320733227570429963/1143609877575520438/1144503616389009418)
 ### WeaponNameHud - rekitrelt:
 ![alt text](https://github.com/rekitrelt/WarforkHuds/blob/main/Hud%20previews/WeaponNameHud.jpg?raw=true)
+### Gelmo - Gelmo
+![alt text](https://cdn.discordapp.com/attachments/1145541732554002556/1145811681012887673/20230828140525_1.jpg)
+![alt text](https://cdn.discordapp.com/attachments/1145541732554002556/1145810873936519290/20230828134540_1.jpg)
+![alt text](https://cdn.discordapp.com/attachments/1145541732554002556/1145810874217550066/20230828134953_1.jpg)
+![alt text](https://cdn.discordapp.com/attachments/1145541732554002556/1145810874460799086/20230828135658_1.jpg)
+### ToxicHUD - fakeperson:
+![alt text](https://cdn.discordapp.com/attachments/1143609877575520438/1144503615491424316/1.jpg)
+![alt text](https://cdn.discordapp.com/attachments/1143609877575520438/1144503615738892328/2.jpg)
+![alt text](https://cdn.discordapp.com/attachments/1143609877575520438/1144503615982149723/3.jpg)
+![alt text](https://cdn.discordapp.com/attachments/1143609877575520438/1144503616196067379/4.jpg)
