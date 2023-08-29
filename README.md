@@ -42,9 +42,7 @@ edit `huds/focus.hud` for extra configuration
 ### WeaponNameHud - rekitrelt:
 ![alt text](https://github.com/rekitrelt/WarforkHuds/blob/main/Hud%20previews/WeaponNameHud.jpg?raw=true)
 ### eqN - eqN
-Clan Arena:
 ![alt text](https://cdn.discordapp.com/attachments/1144432352446136382/1145898008970530926/20230828150007_2.jpg)
-Duel:
 ![alt text](https://cdn.discordapp.com/attachments/1144432352446136382/1145898070450634752/20230828150404_1.jpg)
 ### Gelmo - Gelmo
 ![alt text](https://cdn.discordapp.com/attachments/1145541732554002556/1145811681012887673/20230828140525_1.jpg)
