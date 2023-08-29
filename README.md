@@ -25,6 +25,8 @@ edit `huds/focus.hud` for extra configuration
 
 [WeaponNameHud - rekitrelt](https://github.com/rekitrelt/WarforkHuds/releases/download/Release/WeaponNameHud-rekitrelt.zip)
 
+[eqN - eqN](https://github.com/rekitrelt/WarforkHuds/releases/download/Release/eqN-eqN.zip)
+
 # Hud Previews:
 
 ### Milfork - Mil:
