@@ -1,0 +1,14 @@
+if %HEALTH != #NOTSET
+if %WEAPON_ITEM
+if %SHOW_SPEED != 0
+
+//SPEED
+	setAlign #CENTER, #MIDDLE
+	setcursor #WIDTH / 2, 150 + #HEIGHT / 2
+	moveCursor 0, -100
+	setSize 24 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 24
+	setColor 1, 1, 1, .6
+	drawNum %SPEED
+endif
+endif
+endif

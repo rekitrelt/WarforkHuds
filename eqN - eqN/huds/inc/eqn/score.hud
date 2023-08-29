@@ -1,0 +1,13 @@
+if %SCORE != #NOTSET
+if %RACE == 0
+if %INDIVIDUAL == 0
+
+	setColor 1, 1, 1, 1
+	setSize 11 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 13
+	setAlign #CENTER, #MIDDLE
+	setCursor #WIDTH / 2, #HEIGHT - 540
+	drawNum %SCORE
+
+endif
+endif
+endif

@@ -1,0 +1,133 @@
+if %RACE == 0
+if %HEALTH != #NOTSET
+
+	//background
+	setAlign #CENTER, #MIDDLE
+	setcursor -90 + #WIDTH / 2, 80 + #HEIGHT / 2
+	setColor 0, 0, 0, 0.0
+	setSize 90, 60
+	drawPicByName $whiteimage
+	
+	if %ARMOR != 0
+		setAlign #LEFT, #MIDDLE
+	endif
+	if %ARMOR <= 0
+		setAlign #CENTER, #BOTTOM
+	endif
+	
+	// draws the health number
+	        if %HEALTH < 25
+                setColor 0.9 0.2 0.1 .6
+	endif
+	if %HEALTH < 50
+                if %HEALTH >= 25
+                        setColor 0.9 0.4 0.3 .6
+                endif
+	endif	
+
+	if %HEALTH < 76
+                if %HEALTH >= 50
+                        setColor 0.9 0.8 0.3 .6
+		endif
+	endif
+	if %HEALTH >= 76
+		setColor 1 1 1 .6
+	endif
+	if %HEALTH > 100
+		setColor 1 0.3 1 .6
+	endif
+
+	setSize 30 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 30
+	moveCursor -25, 8
+	drawNum %HEALTH
+	
+    // draws the armor number
+	if %ARMOR != 0
+	    if %ARMOR < 50
+	                setColor 1 1 1 .6
+	        endif
+		if %ARMOR >= 50
+	                if %ARMOR < 101
+	                        setColor 0.3 0.9 0.3 .6
+			endif
+		endif
+		if %ARMOR >= 100
+	                if %ARMOR < 126
+	                        setColor 1 0.9 0.2 .6
+	                endif
+		endif
+		if %ARMOR >= 126
+	                setColor 0.65 0.1 0.15 .6
+	                if %ARMOR >= 150
+	                        setColor 0.6 0.05 0.1 .6
+	                endif
+		endif
+	    	setSize 17 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 17
+	    	moveCursor 0, -23
+	    	drawNum %ARMOR
+	endif	
+
+	// draws the armor icon
+	setSize 16 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 16
+	moveCursor -14, 0
+	setColor 0, 0, 0, .4
+	if %INSTAGIB == 0
+		if %ARMOR != 0
+	       if %ARMOR < 50
+	                drawPicByItemIndex #ITEM_ARMOR_SHARD
+	                setColor 1 1 1 1
+	        endif
+		if %ARMOR >= 50
+	                if %ARMOR < 100
+	                        drawPicByItemIndex #ITEM_GREEN_ARMOR
+	                        setColor 0.3 0.9 0.3 1
+			endif
+		endif
+			if %ARMOR >= 100
+				if %ARMOR <= 125
+					drawPicByItemIndex #ITEM_YELLOW_ARMOR
+					setColor 1 0.96 0 1
+				endif
+			endif
+			if %ARMOR >= 126
+				drawPicByItemIndex #ITEM_RED_ARMOR
+				setColor 1 0 0 1
+			endif
+		endif
+endif
+if %INSTAGIB == 1
+	drawPicByItemIndex #ITEM_WARSHELL
+	setColor 0 0.6 1 1
+endif
+	
+
+	// draws the health icons
+	moveCursor -1, 23
+	setSize 20 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 20
+	if %HEALTH > 100
+		setColor 0, 0, 0, .4
+		drawPicByItemIndex #ITEM_MEGA_HEALTH
+	endif
+	
+	if %HEALTH <= 100
+	if %HEALTH >= 76
+		setColor 0, 0, 0, .4
+		drawPicByItemIndex #ITEM_50_HEALTH
+	endif
+	endif
+
+	if %HEALTH <= 75
+	if %HEALTH >= 50
+		setColor 0, 0, 0, .4
+		drawPicByItemIndex #ITEM_25_HEALTH
+	endif
+	endif
+
+	if %HEALTH < 50
+		setColor 0, 0, 0, .4
+		drawPicByItemIndex #ITEM_REGENERATION
+	endif
+endif
+endif
+
+

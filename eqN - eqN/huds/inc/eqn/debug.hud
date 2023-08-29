@@ -1,0 +1,9 @@
+if %RACE == 0
+	//background
+	setAlign #CENTER, #MIDDLE
+	setcursor #WIDTH / 2, 150 + #HEIGHT / 1.9
+	setColor 1, 1, 1, 1
+	setSize 10 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 10
+	drawNum %IMAGE_BETA
+endif
+

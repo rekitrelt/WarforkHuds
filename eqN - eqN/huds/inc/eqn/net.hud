@@ -1,0 +1,6 @@
+setAlign #CENTER #BOTTOM
+setCursor #WIDTH / 2, #HEIGHT * 0.75
+setSize 48 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 48
+setColor 1 1 1 .8
+moveCursor 0, -5
+drawNetIcon

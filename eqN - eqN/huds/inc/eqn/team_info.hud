@@ -1,0 +1,14 @@
+//
+// Draws team info (locations, status)
+//
+
+drawTeamMates
+setFontFamily "Noto Sans"
+setFontStyle Bold
+setFontSize %VIDHEIGHT / 54
+setAlign 3 3
+setColor 1 1 1 0.9
+setCursor #WIDTH, #HEIGHT
+moveCursor 10 * 1.333 * %VIDHEIGHT / %VIDWIDTH, -80
+drawTeamInfo
+setFontStyle Normal

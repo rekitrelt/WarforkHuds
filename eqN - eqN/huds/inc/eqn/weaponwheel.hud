@@ -1,0 +1,12 @@
+if %TEAM != #TEAM_SPECTATOR
+	if %WEAPON_ITEM
+		if %INSTAGIB == 0
+			setAlign #CENTER, #BOTTOM
+			setCursor #WIDTH / 2, #HEIGHT - 155
+			moveCursor 40 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 100
+			drawWeaponIcons 80 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0, 50 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 50
+			moveCursor 0 * 1.333 * %VIDHEIGHT / %VIDWIDTH, -20
+			drawWeaponStrongAmmo 80 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0, 15
+		endif
+	endif
+endif

@@ -1,0 +1,132 @@
+
+setCursor #WIDTH / 2, 0
+
+// Top score/clock background
+setAlign 2 1
+setSize 395 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 40
+setColor 0 0 0 0.5
+setColorAlpha 0.25
+if %TEAM == #TEAM_SPECTATOR
+	setColorAlpha 0.75
+endif
+drawPicByName "gfx/hud/default/top_bar"
+
+//clock numbers
+if %SHOW_SPEED <= 1
+	moveCursor 0 -1
+	setFontFamily "Goldman"
+	setFontSize %VIDHEIGHT / 16
+
+	//pro outline
+	setColor 0 0 0 1
+	drawClock
+	moveCursor 0, -2
+	drawClock
+	moveCursor -2, 0
+	drawClock
+	moveCursor 0, 2
+	drawClock
+	moveCursor 1, -1
+
+	setColor 1 1 1 1
+	drawClock
+	moveCursor +0.5, +0.5
+endif
+
+//clock numbers in race
+if %SHOW_SPEED == 2
+if %RACE == 1
+	moveCursor 0 -1
+	setFontFamily "Goldman"
+	setFontSize %VIDHEIGHT / 16
+
+	//pro outline
+	setColor 0 0 0 1
+	drawClock
+	moveCursor 0, -2
+	drawClock
+	moveCursor -2, 0
+	drawClock
+	moveCursor 0, 2
+	drawClock
+	moveCursor 1, -1
+
+	setColor 1 1 1 1
+	drawClock
+	moveCursor +0.5, +0.5
+endif
+endif
+
+// MATCH STATES
+setFontFamily "Orbitron"
+setFontSize %VIDHEIGHT / 48
+setAlign 2 1
+setCursor #WIDTH / 2, 40
+moveCursor 0 2
+setColor 0.4 1 0.4 0.5
+if %MATCH_STATE == #MATCH_STATE_WARMUP
+	drawString "Warmup"
+endif
+if %OVERTIME
+	drawString "Overtime"
+endif
+setFontStyle Normal
+
+// Second Clock for DUELERS!
+if %SHOW_SPEED == 2
+if %RACE != 1
+	if %WEAPON_ITEM
+
+		//specifics
+		setAlign #LEFT #MIDDLE
+		moveCursor 75 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 340
+
+		//clock numbers
+		moveCursor 0 -1
+		setFontFamily "WarsowNumbers"
+		setFontSize %VIDHEIGHT / 20
+
+		//pro outline
+		setColor 0 0 0 .6
+		drawClock
+		moveCursor 0, -2
+		drawClock
+		moveCursor -2, 0
+		drawClock
+		moveCursor 0, 2
+		drawClock
+		moveCursor 1, 0
+		drawClock
+		moveCursor 1, -1
+		setColor 1 1 1 .6
+		if %SHOW_PICKUP > 0
+			if %PICKUP_ITEM == #ITEM_RED_ARMOR
+				setColor 0.9 0.2 0.2 .6 // red
+			endif
+			if %PICKUP_ITEM == #ITEM_YELLOW_ARMOR
+				setColor 1 0.9 0.2 .6 // yellow
+			endif
+			if %PICKUP_ITEM == #ITEM_GREEN_ARMOR
+				setColor 0.3 0.9 0.3 .6 // green
+			endif
+			if %PICKUP_ITEM == #ITEM_MEGA_HEALTH
+				setColor 1 0.3 1 .6 // magenta
+			endif
+			if %PICKUP_ITEM == #ITEM_ULTRA_HEALTH
+				setColor 0.2 0.4 1.0 .6 // blue
+			endif
+			if %PICKUP_ITEM == #ITEM_QUAD_DAMAGE
+				setColor 1 0.5 0 .6 // orange
+			endif
+			if %PICKUP_ITEM == #ITEM_WARSHELL
+				setColor 0.2 1 1 .6 // lightblue
+			endif
+			if %PICKUP_ITEM == #ITEM_REGENERATION
+				setColor 0.9 0.2 0.2 .6 // red
+			endif
+		moveCursor 0, 0
+		drawClock	
+		endif
+	endif
+endif
+endif

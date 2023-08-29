@@ -1,0 +1,78 @@
+// cg_showspeed 1 = Clan Arena Hud
+// cg showspeed 2 = Duel / DM / Clock Hud
+
+include eqn/obituaries
+include eqn/chat
+
+if %MATCH_STATE < #MATCH_STATE_POSTMATCH
+    include zoom
+    include damage_indicator_screen
+    include crosshair
+    include damage_numbers
+    include eqn/awards
+    include eqn/clock
+    include eqn/fps
+    include eqn/strafe
+    include eqn/chasing
+    include eqn/pointing
+    include eqn/download
+    include eqn/net
+    include eqn/speed
+    include eqn/fps
+    include eqn/help_message
+    include eqn/picked_up_item
+    include eqn/keystate
+    include eqn/weaponwheel
+    //include eqn/debug
+
+if %RACE == 0
+    include eqn/ammo_current
+    include eqn/health_armor
+    include eqn/weaponlist
+    include eqn/stunned
+    include eqn/ammo_warning
+    include default/powerups
+
+if %TUTORIAL == 0
+    include eqn/score
+    include eqn/scores
+    include eqn/team_info
+    include eqn/team_image
+    include eqn/team_message
+    include eqn/team_progress
+    include eqn/minimap
+    include eqn/item_timers
+    include eqn/chasing
+
+endif //if %TUTORIAL == 0
+endif //if %RACE == 0
+endif //if %MATCH_STATE < #MATCH_STATE_POSTMATCH
+
+if %RACE == 1
+    include eqn/speedbar
+    include eqn/racespeed
+
+endif //if %RACE == 1
+
+//adds transparent dark background if scoreboard is shown
+if %SCOREBOARD == 1
+    setCursor 0 0
+    setAlign 0 0
+    setSize 800 600
+    setColor 0 0 0 0.3
+    drawPicByName *whiteImage
+
+    //adds the map name at the top when the scoreboard is shown
+    setAlign #CENTER, #MIDDLE
+    setcursor #WIDTH / 2, 78
+    setColor 1, 1, 1, .8
+    setSize 10 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 10
+
+    moveCursor 0 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 16
+    drawStatString 6
+
+endif //if %SCOREBOARD == 1
+
+endif //?????
+
+// Big thanks to Mil, Rekitrelt, Gelmo, and Aru, all of whom helped me learn and from whom I borrowed code!

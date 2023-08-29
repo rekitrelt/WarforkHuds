@@ -1,0 +1,6 @@
+setfontfamily con_fontSystem
+setfontsize %vidheight / 36
+setcolor 0.8 0.8 0.8 0.4
+setcursor 400 65
+setalign #center, #top
+drawplayername %chasing
