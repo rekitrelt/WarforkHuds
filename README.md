@@ -12,7 +12,7 @@ or another way to get to the same folder:
 
 [Milfork - mil & group effort](https://github.com/rekitrelt/WarforkHuds/releases/download/Release/milfork-mil.zip)
 
-[Moxic - rekitrelt](https://github.com/rekitrelt/WarforkHuds/releases/download/Release/moxic-rekitrelt.zip)
+[Moxic - rekitrelt](https://github.com/rekitrelt/WarforkHuds/releases/download/Release/moxic-rekitrelt.zip) modded toxic `cg_showspeed 4` or `cg_showspeed 5` for crosshair
 
 [bwHUD - margarinoslv](https://github.com/margarinoslv/bwHUD/archive/refs/heads/main.zip)
 
@@ -27,7 +27,7 @@ edit `huds/focus.hud` for extra configuration
 
 [Gelmo - Gelmo](https://github.com/rekitrelt/WarforkHuds/releases/download/Release/WarforkHuds-Gelmo.zip)
 
-[ToxicHUD - fakeperson](https://github.com/rekitrelt/WarforkHuds/releases/download/Release/toxicHUD-fakeperson.zip)
+[ToxicHUD - fakeperson](https://github.com/rekitrelt/WarforkHuds/releases/download/Release/toxicHUD-fakeperson.zip) `cg_showspeed 4` or `cg_showspeed 5` for crosshair
 
 
 # Hud Previews:
