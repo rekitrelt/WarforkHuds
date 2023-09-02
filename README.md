@@ -10,7 +10,7 @@ or another way to get to the same folder:
 ## [Preview Huds](https://github.com/rekitrelt/WarforkHuds/blob/main/Hud%20previews/README.md)
 ## Hud Downloads:
 
-[Milfork - mil & group effort](https://github.com/rekitrelt/WarforkHuds/releases/download/Release/milfork-mil.zip)
+[Milfork - mil](https://github.com/rekitrelt/WarforkHuds/releases/download/Release/milfork-mil.zip)
 
 [Moxic - rekitrelt](https://github.com/rekitrelt/WarforkHuds/releases/download/Release/moxic-rekitrelt.zip) `cg_showspeed 4` or `cg_showspeed 5` for crosshair
 
