@@ -14,7 +14,8 @@ or another way to get to the same folder:
 
 [Milfork - mil](https://github.com/rekitrelt/WarforkHuds/releases/download/Release/milfork-mil.zip)
 
-[Moxic - rekitrelt](https://github.com/rekitrelt/WarforkHuds/releases/download/Release/moxic-rekitrelt.zip) `cg_showspeed 4` or `cg_showspeed 5` for crosshair
+[Moxic - rekitrelt](https://github.com/rekitrelt/WarforkHuds/releases/download/Release/moxic-rekitrelt.zip)
+`cg_showspeed 4` or `cg_showspeed 5` for crosshair
 
 [bwHUD - margarinoslv](https://github.com/margarinoslv/bwHUD/raw/main/BWHUD.pk3)
 
@@ -29,7 +30,11 @@ edit `huds/focus.hud` for extra configuration
 
 [Gelmo - Gelmo](https://github.com/rekitrelt/WarforkHuds/releases/download/Release/WarforkHuds-Gelmo.zip)
 
-[ToxicHUD - fakeperson](https://github.com/rekitrelt/WarforkHuds/releases/download/Release/toxicHUD-fakeperson.zip) `cg_showspeed 4` or `cg_showspeed 5` for crosshair
+[ToxicHUD - fakeperson](https://github.com/rekitrelt/WarforkHuds/releases/download/Release/toxicHUD-fakeperson.zip)
+`cg_showspeed 4` or `cg_showspeed 5` for crosshair
+
+[Minecraft - aru](https://gitlab.com/arutonee1/warfork-minecraft-hud/-/raw/main/Minecraft.zip?ref_type=heads)
+See the [repo](https://gitlab.com/arutonee1/warfork-minecraft-hud) for more info, updates, and customization options
 
 
 # Hud Previews:
