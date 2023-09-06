@@ -1,0 +1,3737 @@
+setscale #defaultscale
+drawDamageNumbers
+if %weapon_item
+setalign #center #middle
+setcursor #width / 2 #height / 2
+drawcrosshair
+
+endif
+if %chasing != #notset
+setfontfamily Minecraft
+setfontsize %vidheight / 36
+setcolor 1 1 1 1
+setcursor 10 10
+setalign #left #top
+drawplayername %chasing
+
+endif
+setfontfamily Minecraft
+setfontsize %vidheight / 50
+setcolor 1 1 1 1
+setalign #center #middle
+setcursor #width / 2 32 + #height / 2
+drawpointing
+setalign #center #middle
+drawteammates
+setalign #left #top
+setcursor 0 - 16.875 - #width / 2 #height - 2 * 45
+setcustomweaponselect gfx/hud/minecraft/outline.png
+setcustomweaponicons #ITEM_GUNBLADE 1 gfx/hud/minecraft/gunblade.png
+setcustomweaponicons #ITEM_MACHINEGUN 1 gfx/hud/minecraft/machinegun.png
+setcustomweaponicons #ITEM_RIOTGUN 1 gfx/hud/minecraft/riotgun.png
+setcustomweaponicons #ITEM_GRENADE_LAUNCHER 1 gfx/hud/minecraft/grenade.png
+setcustomweaponicons #ITEM_ROCKET_LAUNCHER 1 gfx/hud/minecraft/rocket.png
+setcustomweaponicons #ITEM_PLASMAGUN 1 gfx/hud/minecraft/plasma.png
+setcustomweaponicons #ITEM_LASERGUN 1 gfx/hud/minecraft/laser.png
+setcustomweaponicons #ITEM_ELECTROBOLT 1 gfx/hud/minecraft/electro.png
+movecursor 33.75 * 0 - 4 0
+setsize 9 * 33.75 45
+setcolor 1 1 1 1
+drawpicbyname gfx/hud/minecraft/hotbar.png
+movecursor 33.75 * 4 0
+if %instagib == 0
+if %weapon_item
+drawweaponicons 33.75 0 33.75 45
+movecursor 0.75 * 45 - 3 * 10 0 - 10 - 45
+drawweaponstrongammo 33.75 0 10
+movecursor 0.75 * 0 - 45 - 3 * 10 10 - 45
+
+endif
+
+endif
+if %show_speed == 2
+setcursor #width / 2 #height / 2
+setalign #right #bottom
+movecursor 0 - 60 0
+movecursor 0 - 1.5 0 - 2
+setfontfamily Minecraft
+setfontsize 24 * %vidheight / #height
+setcolor 0 0 0 1
+drawstringnum %health
+movecursor 1.5 2
+setcolor %health %health / 100 %health / 50 1
+drawstringnum %health
+
+endif
+setalign #left #bottom
+setsize 13.5 18
+setcolor 1 1 1 1
+setcursor #width / 2 #height
+movecursor 0 0 - 2 * 45
+movecursor 0 - 4 * 33.75 0 - 10
+movecursor 0 - 0.5 * 33.75 0
+if %health > 5
+drawpicbyname gfx/hud/minecraft/heart.png
+
+endif
+ifnot %health > 5
+if %health > 0
+drawpicbyname gfx/hud/minecraft/halfheart.png
+
+endif
+ifnot %health > 0
+drawpicbyname gfx/hud/minecraft/emptyheart.png
+
+endif
+
+endif
+movecursor 13.5 0
+if %health > 15
+drawpicbyname gfx/hud/minecraft/heart.png
+
+endif
+ifnot %health > 15
+if %health > 10
+drawpicbyname gfx/hud/minecraft/halfheart.png
+
+endif
+ifnot %health > 10
+drawpicbyname gfx/hud/minecraft/emptyheart.png
+
+endif
+
+endif
+movecursor 13.5 0
+if %health > 25
+drawpicbyname gfx/hud/minecraft/heart.png
+
+endif
+ifnot %health > 25
+if %health > 20
+drawpicbyname gfx/hud/minecraft/halfheart.png
+
+endif
+ifnot %health > 20
+drawpicbyname gfx/hud/minecraft/emptyheart.png
+
+endif
+
+endif
+movecursor 13.5 0
+if %health > 35
+drawpicbyname gfx/hud/minecraft/heart.png
+
+endif
+ifnot %health > 35
+if %health > 30
+drawpicbyname gfx/hud/minecraft/halfheart.png
+
+endif
+ifnot %health > 30
+drawpicbyname gfx/hud/minecraft/emptyheart.png
+
+endif
+
+endif
+movecursor 13.5 0
+if %health > 45
+drawpicbyname gfx/hud/minecraft/heart.png
+
+endif
+ifnot %health > 45
+if %health > 40
+drawpicbyname gfx/hud/minecraft/halfheart.png
+
+endif
+ifnot %health > 40
+drawpicbyname gfx/hud/minecraft/emptyheart.png
+
+endif
+
+endif
+movecursor 13.5 0
+if %health > 55
+drawpicbyname gfx/hud/minecraft/heart.png
+
+endif
+ifnot %health > 55
+if %health > 50
+drawpicbyname gfx/hud/minecraft/halfheart.png
+
+endif
+ifnot %health > 50
+drawpicbyname gfx/hud/minecraft/emptyheart.png
+
+endif
+
+endif
+movecursor 13.5 0
+if %health > 65
+drawpicbyname gfx/hud/minecraft/heart.png
+
+endif
+ifnot %health > 65
+if %health > 60
+drawpicbyname gfx/hud/minecraft/halfheart.png
+
+endif
+ifnot %health > 60
+drawpicbyname gfx/hud/minecraft/emptyheart.png
+
+endif
+
+endif
+movecursor 13.5 0
+if %health > 75
+drawpicbyname gfx/hud/minecraft/heart.png
+
+endif
+ifnot %health > 75
+if %health > 70
+drawpicbyname gfx/hud/minecraft/halfheart.png
+
+endif
+ifnot %health > 70
+drawpicbyname gfx/hud/minecraft/emptyheart.png
+
+endif
+
+endif
+movecursor 13.5 0
+if %health > 85
+drawpicbyname gfx/hud/minecraft/heart.png
+
+endif
+ifnot %health > 85
+if %health > 80
+drawpicbyname gfx/hud/minecraft/halfheart.png
+
+endif
+ifnot %health > 80
+drawpicbyname gfx/hud/minecraft/emptyheart.png
+
+endif
+
+endif
+movecursor 13.5 0
+if %health > 95
+drawpicbyname gfx/hud/minecraft/heart.png
+
+endif
+ifnot %health > 95
+if %health > 90
+drawpicbyname gfx/hud/minecraft/halfheart.png
+
+endif
+ifnot %health > 90
+drawpicbyname gfx/hud/minecraft/emptyheart.png
+
+endif
+
+endif
+movecursor 13.5 0
+if %health > 100
+setcursor #width / 2 #height
+movecursor 0 0 - 2 * 45
+movecursor 0 - 4 * 33.75 0 - 10
+movecursor 0 - 0.5 * 33.75 0
+movecursor 0 0 - 18
+if %health > 105
+drawpicbyname gfx/hud/minecraft/abheart.png
+
+endif
+ifnot %health > 105
+if %health > 100
+drawpicbyname gfx/hud/minecraft/halfabheart.png
+
+endif
+ifnot %health > 100
+drawpicbyname gfx/hud/minecraft/emptyheart.png
+
+endif
+
+endif
+movecursor 13.5 0
+if %health > 115
+drawpicbyname gfx/hud/minecraft/abheart.png
+
+endif
+ifnot %health > 115
+if %health > 110
+drawpicbyname gfx/hud/minecraft/halfabheart.png
+
+endif
+ifnot %health > 110
+drawpicbyname gfx/hud/minecraft/emptyheart.png
+
+endif
+
+endif
+movecursor 13.5 0
+if %health > 125
+drawpicbyname gfx/hud/minecraft/abheart.png
+
+endif
+ifnot %health > 125
+if %health > 120
+drawpicbyname gfx/hud/minecraft/halfabheart.png
+
+endif
+ifnot %health > 120
+drawpicbyname gfx/hud/minecraft/emptyheart.png
+
+endif
+
+endif
+movecursor 13.5 0
+if %health > 135
+drawpicbyname gfx/hud/minecraft/abheart.png
+
+endif
+ifnot %health > 135
+if %health > 130
+drawpicbyname gfx/hud/minecraft/halfabheart.png
+
+endif
+ifnot %health > 130
+drawpicbyname gfx/hud/minecraft/emptyheart.png
+
+endif
+
+endif
+movecursor 13.5 0
+if %health > 145
+drawpicbyname gfx/hud/minecraft/abheart.png
+
+endif
+ifnot %health > 145
+if %health > 140
+drawpicbyname gfx/hud/minecraft/halfabheart.png
+
+endif
+ifnot %health > 140
+drawpicbyname gfx/hud/minecraft/emptyheart.png
+
+endif
+
+endif
+movecursor 13.5 0
+if %health > 155
+drawpicbyname gfx/hud/minecraft/abheart.png
+
+endif
+ifnot %health > 155
+if %health > 150
+drawpicbyname gfx/hud/minecraft/halfabheart.png
+
+endif
+ifnot %health > 150
+drawpicbyname gfx/hud/minecraft/emptyheart.png
+
+endif
+
+endif
+movecursor 13.5 0
+if %health > 165
+drawpicbyname gfx/hud/minecraft/abheart.png
+
+endif
+ifnot %health > 165
+if %health > 160
+drawpicbyname gfx/hud/minecraft/halfabheart.png
+
+endif
+ifnot %health > 160
+drawpicbyname gfx/hud/minecraft/emptyheart.png
+
+endif
+
+endif
+movecursor 13.5 0
+if %health > 175
+drawpicbyname gfx/hud/minecraft/abheart.png
+
+endif
+ifnot %health > 175
+if %health > 170
+drawpicbyname gfx/hud/minecraft/halfabheart.png
+
+endif
+ifnot %health > 170
+drawpicbyname gfx/hud/minecraft/emptyheart.png
+
+endif
+
+endif
+movecursor 13.5 0
+if %health > 185
+drawpicbyname gfx/hud/minecraft/abheart.png
+
+endif
+ifnot %health > 185
+if %health > 180
+drawpicbyname gfx/hud/minecraft/halfabheart.png
+
+endif
+ifnot %health > 180
+drawpicbyname gfx/hud/minecraft/emptyheart.png
+
+endif
+
+endif
+movecursor 13.5 0
+if %health > 195
+drawpicbyname gfx/hud/minecraft/abheart.png
+
+endif
+ifnot %health > 195
+if %health > 190
+drawpicbyname gfx/hud/minecraft/halfabheart.png
+
+endif
+ifnot %health > 190
+drawpicbyname gfx/hud/minecraft/emptyheart.png
+
+endif
+
+endif
+movecursor 13.5 0
+
+endif
+if %show_speed == 2
+setcursor #width / 2 #height / 2
+setalign #right #top
+movecursor 0 - 60 0
+movecursor 0 - 1.5 0 - 2
+setfontfamily Minecraft
+setfontsize 24 * %vidheight / #height
+setcolor 0 0 0 1
+drawstringnum %armor
+movecursor 1.5 2
+setcolor %armor / 150 %armor / 150 %armor 1
+drawstringnum %armor
+
+endif
+setalign #left #bottom
+setsize 13.5 18
+setcolor 1 1 1 1
+setcursor #width / 2 #height
+movecursor 0 0 - 2 * 45
+movecursor 0 0 - 18
+movecursor 0 - 4 * 33.75 0 - 10
+movecursor 0 - 0.5 * 33.75 0
+if %health > 100
+movecursor 0 0 - 18
+
+endif
+if %armor > 0
+if %armor > 7.5
+drawpicbyname gfx/hud/minecraft/armor.png
+
+endif
+ifnot %armor > 7.5
+if %armor > 0
+drawpicbyname gfx/hud/minecraft/halfarmor.png
+
+endif
+ifnot %armor > 0
+drawpicbyname gfx/hud/minecraft/emptyarmor.png
+
+endif
+
+endif
+movecursor 13.5 0
+if %armor > 22.5
+drawpicbyname gfx/hud/minecraft/armor.png
+
+endif
+ifnot %armor > 22.5
+if %armor > 15
+drawpicbyname gfx/hud/minecraft/halfarmor.png
+
+endif
+ifnot %armor > 15
+drawpicbyname gfx/hud/minecraft/emptyarmor.png
+
+endif
+
+endif
+movecursor 13.5 0
+if %armor > 37.5
+drawpicbyname gfx/hud/minecraft/armor.png
+
+endif
+ifnot %armor > 37.5
+if %armor > 30
+drawpicbyname gfx/hud/minecraft/halfarmor.png
+
+endif
+ifnot %armor > 30
+drawpicbyname gfx/hud/minecraft/emptyarmor.png
+
+endif
+
+endif
+movecursor 13.5 0
+if %armor > 52.5
+drawpicbyname gfx/hud/minecraft/armor.png
+
+endif
+ifnot %armor > 52.5
+if %armor > 45
+drawpicbyname gfx/hud/minecraft/halfarmor.png
+
+endif
+ifnot %armor > 45
+drawpicbyname gfx/hud/minecraft/emptyarmor.png
+
+endif
+
+endif
+movecursor 13.5 0
+if %armor > 67.5
+drawpicbyname gfx/hud/minecraft/armor.png
+
+endif
+ifnot %armor > 67.5
+if %armor > 60
+drawpicbyname gfx/hud/minecraft/halfarmor.png
+
+endif
+ifnot %armor > 60
+drawpicbyname gfx/hud/minecraft/emptyarmor.png
+
+endif
+
+endif
+movecursor 13.5 0
+if %armor > 82.5
+drawpicbyname gfx/hud/minecraft/armor.png
+
+endif
+ifnot %armor > 82.5
+if %armor > 75
+drawpicbyname gfx/hud/minecraft/halfarmor.png
+
+endif
+ifnot %armor > 75
+drawpicbyname gfx/hud/minecraft/emptyarmor.png
+
+endif
+
+endif
+movecursor 13.5 0
+if %armor > 97.5
+drawpicbyname gfx/hud/minecraft/armor.png
+
+endif
+ifnot %armor > 97.5
+if %armor > 90
+drawpicbyname gfx/hud/minecraft/halfarmor.png
+
+endif
+ifnot %armor > 90
+drawpicbyname gfx/hud/minecraft/emptyarmor.png
+
+endif
+
+endif
+movecursor 13.5 0
+if %armor > 112.5
+drawpicbyname gfx/hud/minecraft/armor.png
+
+endif
+ifnot %armor > 112.5
+if %armor > 105
+drawpicbyname gfx/hud/minecraft/halfarmor.png
+
+endif
+ifnot %armor > 105
+drawpicbyname gfx/hud/minecraft/emptyarmor.png
+
+endif
+
+endif
+movecursor 13.5 0
+if %armor > 127.5
+drawpicbyname gfx/hud/minecraft/armor.png
+
+endif
+ifnot %armor > 127.5
+if %armor > 120
+drawpicbyname gfx/hud/minecraft/halfarmor.png
+
+endif
+ifnot %armor > 120
+drawpicbyname gfx/hud/minecraft/emptyarmor.png
+
+endif
+
+endif
+movecursor 13.5 0
+if %armor > 142.5
+drawpicbyname gfx/hud/minecraft/armor.png
+
+endif
+ifnot %armor > 142.5
+if %armor > 135
+drawpicbyname gfx/hud/minecraft/halfarmor.png
+
+endif
+ifnot %armor > 135
+drawpicbyname gfx/hud/minecraft/emptyarmor.png
+
+endif
+
+endif
+movecursor 13.5 0
+
+endif
+if %show_speed == 2
+setcursor #width / 2 #height / 2
+setalign #left #middle
+movecursor 60 0
+movecursor 0 - 1.5 0 - 2
+setfontfamily Minecraft
+setfontsize 24 * %vidheight / #height
+setcolor 0 0 0 1
+drawstringnum %ammo
+movecursor 1.5 2
+if %weapon_item == #ITEM_GUNBLADE
+setcolor 1.0 1.0 1.0 1
+
+endif
+if %weapon_item == #ITEM_MACHINEGUN
+setcolor 0.5 0.5 0.5 1
+
+endif
+if %weapon_item == #ITEM_RIOTGUN
+setcolor 1.0 0.5 0.0 1
+
+endif
+if %weapon_item == #ITEM_GRENADE_LAUNCHER
+setcolor 0.0 0.0 1.0 1
+
+endif
+if %weapon_item == #ITEM_ROCKET_LAUNCHER
+setcolor 1.0 0.0 0.0 1
+
+endif
+if %weapon_item == #ITEM_PLASMAGUN
+setcolor 0.0 1.0 0.0 1
+
+endif
+if %weapon_item == #ITEM_LASERGUN
+setcolor 1.0 1.0 0.0 1
+
+endif
+if %weapon_item == #ITEM_ELECTROBOLT
+setcolor 0.0 1.0 1.0 1
+
+endif
+if %instagib
+setcolor 1 0 1 1
+
+endif
+drawstringnum %ammo
+
+endif
+setalign #right #bottom
+setsize 13.5 18
+setcolor 1 1 1 1
+setcursor #width / 2 #height
+movecursor 0 0 - 2 * 45
+movecursor 4 * 33.75 0 - 10
+movecursor 0.5 * 33.75 0
+if %weapon_item == #ITEM_GUNBLADE
+if 0.05 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.05 < %ammo / 1
+if 0.0 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.0 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.15 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.15 < %ammo / 1
+if 0.1 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.1 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.25 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.25 < %ammo / 1
+if 0.2 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.2 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.35 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.35 < %ammo / 1
+if 0.3 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.3 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.45 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.45 < %ammo / 1
+if 0.4 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.4 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.55 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.55 < %ammo / 1
+if 0.5 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.5 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.65 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.65 < %ammo / 1
+if 0.6 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.6 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.75 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.75 < %ammo / 1
+if 0.7 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.7 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.85 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.85 < %ammo / 1
+if 0.8 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.8 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.95 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.95 < %ammo / 1
+if 0.9 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.9 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+setcursor #width / 2 #height
+movecursor 0 0 - 2 * 45
+movecursor 4 * 33.75 0 - 10
+movecursor 0.5 * 33.75 0
+if 1.05 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.05 < %ammo / 1
+if 1.0 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.0 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.15 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.15 < %ammo / 1
+if 1.1 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.1 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.25 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.25 < %ammo / 1
+if 1.2 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.2 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.35 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.35 < %ammo / 1
+if 1.3 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.3 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.45 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.45 < %ammo / 1
+if 1.4 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.4 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.55 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.55 < %ammo / 1
+if 1.5 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.5 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.65 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.65 < %ammo / 1
+if 1.6 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.6 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.75 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.75 < %ammo / 1
+if 1.7 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.7 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.85 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.85 < %ammo / 1
+if 1.8 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.8 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.95 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.95 < %ammo / 1
+if 1.9 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.9 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+
+endif
+if %weapon_item == #ITEM_MACHINEGUN
+if 0.05 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.05 < %ammo / 100
+if 0.0 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.0 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.15 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.15 < %ammo / 100
+if 0.1 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.1 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.25 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.25 < %ammo / 100
+if 0.2 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.2 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.35 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.35 < %ammo / 100
+if 0.3 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.3 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.45 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.45 < %ammo / 100
+if 0.4 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.4 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.55 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.55 < %ammo / 100
+if 0.5 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.5 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.65 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.65 < %ammo / 100
+if 0.6 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.6 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.75 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.75 < %ammo / 100
+if 0.7 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.7 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.85 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.85 < %ammo / 100
+if 0.8 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.8 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.95 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.95 < %ammo / 100
+if 0.9 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.9 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+setcursor #width / 2 #height
+movecursor 0 0 - 2 * 45
+movecursor 4 * 33.75 0 - 10
+movecursor 0.5 * 33.75 0
+if 1.05 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.05 < %ammo / 100
+if 1.0 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.0 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.15 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.15 < %ammo / 100
+if 1.1 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.1 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.25 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.25 < %ammo / 100
+if 1.2 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.2 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.35 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.35 < %ammo / 100
+if 1.3 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.3 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.45 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.45 < %ammo / 100
+if 1.4 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.4 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.55 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.55 < %ammo / 100
+if 1.5 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.5 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.65 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.65 < %ammo / 100
+if 1.6 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.6 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.75 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.75 < %ammo / 100
+if 1.7 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.7 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.85 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.85 < %ammo / 100
+if 1.8 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.8 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.95 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.95 < %ammo / 100
+if 1.9 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.9 < %ammo / 100
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+
+endif
+if %weapon_item == #ITEM_RIOTGUN
+if 0.05 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.05 < %ammo / 20
+if 0.0 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.0 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.15 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.15 < %ammo / 20
+if 0.1 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.1 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.25 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.25 < %ammo / 20
+if 0.2 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.2 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.35 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.35 < %ammo / 20
+if 0.3 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.3 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.45 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.45 < %ammo / 20
+if 0.4 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.4 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.55 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.55 < %ammo / 20
+if 0.5 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.5 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.65 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.65 < %ammo / 20
+if 0.6 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.6 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.75 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.75 < %ammo / 20
+if 0.7 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.7 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.85 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.85 < %ammo / 20
+if 0.8 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.8 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.95 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.95 < %ammo / 20
+if 0.9 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.9 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+setcursor #width / 2 #height
+movecursor 0 0 - 2 * 45
+movecursor 4 * 33.75 0 - 10
+movecursor 0.5 * 33.75 0
+if 1.05 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.05 < %ammo / 20
+if 1.0 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.0 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.15 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.15 < %ammo / 20
+if 1.1 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.1 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.25 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.25 < %ammo / 20
+if 1.2 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.2 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.35 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.35 < %ammo / 20
+if 1.3 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.3 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.45 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.45 < %ammo / 20
+if 1.4 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.4 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.55 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.55 < %ammo / 20
+if 1.5 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.5 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.65 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.65 < %ammo / 20
+if 1.6 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.6 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.75 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.75 < %ammo / 20
+if 1.7 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.7 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.85 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.85 < %ammo / 20
+if 1.8 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.8 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.95 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.95 < %ammo / 20
+if 1.9 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.9 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+
+endif
+if %weapon_item == #ITEM_GRENADE_LAUNCHER
+if 0.05 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.05 < %ammo / 20
+if 0.0 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.0 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.15 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.15 < %ammo / 20
+if 0.1 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.1 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.25 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.25 < %ammo / 20
+if 0.2 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.2 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.35 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.35 < %ammo / 20
+if 0.3 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.3 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.45 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.45 < %ammo / 20
+if 0.4 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.4 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.55 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.55 < %ammo / 20
+if 0.5 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.5 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.65 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.65 < %ammo / 20
+if 0.6 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.6 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.75 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.75 < %ammo / 20
+if 0.7 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.7 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.85 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.85 < %ammo / 20
+if 0.8 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.8 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.95 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.95 < %ammo / 20
+if 0.9 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.9 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+setcursor #width / 2 #height
+movecursor 0 0 - 2 * 45
+movecursor 4 * 33.75 0 - 10
+movecursor 0.5 * 33.75 0
+if 1.05 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.05 < %ammo / 20
+if 1.0 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.0 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.15 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.15 < %ammo / 20
+if 1.1 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.1 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.25 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.25 < %ammo / 20
+if 1.2 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.2 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.35 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.35 < %ammo / 20
+if 1.3 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.3 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.45 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.45 < %ammo / 20
+if 1.4 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.4 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.55 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.55 < %ammo / 20
+if 1.5 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.5 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.65 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.65 < %ammo / 20
+if 1.6 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.6 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.75 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.75 < %ammo / 20
+if 1.7 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.7 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.85 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.85 < %ammo / 20
+if 1.8 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.8 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.95 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.95 < %ammo / 20
+if 1.9 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.9 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+
+endif
+if %weapon_item == #ITEM_ROCKET_LAUNCHER
+if 0.05 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.05 < %ammo / 20
+if 0.0 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.0 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.15 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.15 < %ammo / 20
+if 0.1 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.1 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.25 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.25 < %ammo / 20
+if 0.2 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.2 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.35 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.35 < %ammo / 20
+if 0.3 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.3 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.45 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.45 < %ammo / 20
+if 0.4 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.4 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.55 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.55 < %ammo / 20
+if 0.5 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.5 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.65 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.65 < %ammo / 20
+if 0.6 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.6 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.75 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.75 < %ammo / 20
+if 0.7 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.7 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.85 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.85 < %ammo / 20
+if 0.8 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.8 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.95 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.95 < %ammo / 20
+if 0.9 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.9 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+setcursor #width / 2 #height
+movecursor 0 0 - 2 * 45
+movecursor 4 * 33.75 0 - 10
+movecursor 0.5 * 33.75 0
+if 1.05 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.05 < %ammo / 20
+if 1.0 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.0 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.15 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.15 < %ammo / 20
+if 1.1 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.1 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.25 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.25 < %ammo / 20
+if 1.2 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.2 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.35 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.35 < %ammo / 20
+if 1.3 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.3 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.45 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.45 < %ammo / 20
+if 1.4 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.4 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.55 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.55 < %ammo / 20
+if 1.5 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.5 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.65 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.65 < %ammo / 20
+if 1.6 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.6 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.75 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.75 < %ammo / 20
+if 1.7 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.7 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.85 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.85 < %ammo / 20
+if 1.8 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.8 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.95 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.95 < %ammo / 20
+if 1.9 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.9 < %ammo / 20
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+
+endif
+if %weapon_item == #ITEM_PLASMAGUN
+if 0.05 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.05 < %ammo / 150
+if 0.0 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.0 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.15 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.15 < %ammo / 150
+if 0.1 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.1 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.25 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.25 < %ammo / 150
+if 0.2 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.2 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.35 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.35 < %ammo / 150
+if 0.3 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.3 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.45 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.45 < %ammo / 150
+if 0.4 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.4 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.55 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.55 < %ammo / 150
+if 0.5 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.5 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.65 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.65 < %ammo / 150
+if 0.6 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.6 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.75 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.75 < %ammo / 150
+if 0.7 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.7 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.85 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.85 < %ammo / 150
+if 0.8 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.8 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.95 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.95 < %ammo / 150
+if 0.9 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.9 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+setcursor #width / 2 #height
+movecursor 0 0 - 2 * 45
+movecursor 4 * 33.75 0 - 10
+movecursor 0.5 * 33.75 0
+if 1.05 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.05 < %ammo / 150
+if 1.0 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.0 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.15 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.15 < %ammo / 150
+if 1.1 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.1 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.25 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.25 < %ammo / 150
+if 1.2 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.2 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.35 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.35 < %ammo / 150
+if 1.3 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.3 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.45 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.45 < %ammo / 150
+if 1.4 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.4 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.55 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.55 < %ammo / 150
+if 1.5 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.5 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.65 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.65 < %ammo / 150
+if 1.6 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.6 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.75 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.75 < %ammo / 150
+if 1.7 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.7 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.85 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.85 < %ammo / 150
+if 1.8 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.8 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.95 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.95 < %ammo / 150
+if 1.9 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.9 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+
+endif
+if %weapon_item == #ITEM_LASERGUN
+if 0.05 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.05 < %ammo / 150
+if 0.0 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.0 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.15 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.15 < %ammo / 150
+if 0.1 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.1 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.25 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.25 < %ammo / 150
+if 0.2 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.2 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.35 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.35 < %ammo / 150
+if 0.3 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.3 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.45 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.45 < %ammo / 150
+if 0.4 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.4 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.55 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.55 < %ammo / 150
+if 0.5 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.5 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.65 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.65 < %ammo / 150
+if 0.6 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.6 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.75 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.75 < %ammo / 150
+if 0.7 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.7 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.85 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.85 < %ammo / 150
+if 0.8 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.8 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.95 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.95 < %ammo / 150
+if 0.9 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.9 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+setcursor #width / 2 #height
+movecursor 0 0 - 2 * 45
+movecursor 4 * 33.75 0 - 10
+movecursor 0.5 * 33.75 0
+if 1.05 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.05 < %ammo / 150
+if 1.0 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.0 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.15 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.15 < %ammo / 150
+if 1.1 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.1 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.25 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.25 < %ammo / 150
+if 1.2 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.2 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.35 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.35 < %ammo / 150
+if 1.3 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.3 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.45 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.45 < %ammo / 150
+if 1.4 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.4 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.55 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.55 < %ammo / 150
+if 1.5 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.5 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.65 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.65 < %ammo / 150
+if 1.6 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.6 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.75 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.75 < %ammo / 150
+if 1.7 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.7 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.85 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.85 < %ammo / 150
+if 1.8 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.8 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.95 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.95 < %ammo / 150
+if 1.9 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.9 < %ammo / 150
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+
+endif
+if %weapon_item == #ITEM_ELECTROBOLT
+if 0.05 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.05 < %ammo / 10
+if 0.0 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.0 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.15 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.15 < %ammo / 10
+if 0.1 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.1 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.25 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.25 < %ammo / 10
+if 0.2 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.2 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.35 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.35 < %ammo / 10
+if 0.3 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.3 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.45 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.45 < %ammo / 10
+if 0.4 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.4 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.55 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.55 < %ammo / 10
+if 0.5 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.5 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.65 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.65 < %ammo / 10
+if 0.6 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.6 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.75 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.75 < %ammo / 10
+if 0.7 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.7 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.85 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.85 < %ammo / 10
+if 0.8 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.8 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.95 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.95 < %ammo / 10
+if 0.9 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.9 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+setcursor #width / 2 #height
+movecursor 0 0 - 2 * 45
+movecursor 4 * 33.75 0 - 10
+movecursor 0.5 * 33.75 0
+if 1.05 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.05 < %ammo / 10
+if 1.0 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.0 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.15 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.15 < %ammo / 10
+if 1.1 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.1 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.25 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.25 < %ammo / 10
+if 1.2 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.2 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.35 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.35 < %ammo / 10
+if 1.3 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.3 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.45 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.45 < %ammo / 10
+if 1.4 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.4 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.55 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.55 < %ammo / 10
+if 1.5 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.5 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.65 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.65 < %ammo / 10
+if 1.6 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.6 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.75 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.75 < %ammo / 10
+if 1.7 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.7 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.85 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.85 < %ammo / 10
+if 1.8 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.8 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.95 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.95 < %ammo / 10
+if 1.9 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.9 < %ammo / 10
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+
+endif
+if %weapon_item == #ITEM_INSTAGUN
+if 0.05 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.05 < %ammo / 1
+if 0.0 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.0 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.15 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.15 < %ammo / 1
+if 0.1 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.1 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.25 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.25 < %ammo / 1
+if 0.2 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.2 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.35 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.35 < %ammo / 1
+if 0.3 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.3 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.45 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.45 < %ammo / 1
+if 0.4 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.4 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.55 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.55 < %ammo / 1
+if 0.5 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.5 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.65 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.65 < %ammo / 1
+if 0.6 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.6 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.75 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.75 < %ammo / 1
+if 0.7 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.7 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.85 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.85 < %ammo / 1
+if 0.8 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.8 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 0.95 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/hunger.png
+
+endif
+ifnot 0.95 < %ammo / 1
+if 0.9 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfhunger.png
+
+endif
+ifnot 0.9 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/emptyhunger.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+setcursor #width / 2 #height
+movecursor 0 0 - 2 * 45
+movecursor 4 * 33.75 0 - 10
+movecursor 0.5 * 33.75 0
+if 1.05 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.05 < %ammo / 1
+if 1.0 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.0 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.15 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.15 < %ammo / 1
+if 1.1 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.1 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.25 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.25 < %ammo / 1
+if 1.2 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.2 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.35 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.35 < %ammo / 1
+if 1.3 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.3 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.45 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.45 < %ammo / 1
+if 1.4 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.4 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.55 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.55 < %ammo / 1
+if 1.5 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.5 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.65 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.65 < %ammo / 1
+if 1.6 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.6 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.75 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.75 < %ammo / 1
+if 1.7 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.7 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.85 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.85 < %ammo / 1
+if 1.8 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.8 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+if 1.95 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/sat.png
+
+endif
+ifnot 1.95 < %ammo / 1
+if 1.9 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/halfsat.png
+
+endif
+ifnot 1.9 < %ammo / 1
+drawpicbyname gfx/hud/minecraft/empty.png
+
+endif
+
+endif
+movecursor 0 - 13.5 0
+
+endif
+setalign #left #bottom
+setsize 9 * 33.75 10
+setcolor 0.66 0.84 0.55 1
+setcursor #width / 2 #height
+movecursor 0 0 - 2 * 45
+movecursor 0 - 4 * 33.75 0
+movecursor 0 - 0.5 * 33.75 0
+drawpicbyname gfx/hud/minecraft/emptyxp.png
+setcoloralpha 0.75
+movecursor 1.5 0 - 2
+setsize 0 - 1.5 - 9 * 33.75 10 - 2 + 2
+drawbar %speed 2000
+setcoloralpha 1
+drawpicbyname gfx/hud/minecraft/xpoverlay.png
+setfontsize 24 * %vidheight / #height
+setfontfamily Minecraft
+setalign #center #bottom
+setcolor 0 0 0 1
+setcursor #width / 2 #height
+movecursor 0 0 - 2 * 45
+movecursor 0 - 1.5 0
+drawstringnum %score
+setcursor #width / 2 #height
+movecursor 0 0 - 2 * 45
+movecursor 1.5 0
+drawstringnum %score
+setcursor #width / 2 #height
+movecursor 0 0 - 2 * 45
+movecursor 0 0 - 2
+drawstringnum %score
+setcursor #width / 2 #height
+movecursor 0 0 - 2 * 45
+movecursor 0 2
+drawstringnum %score
+setcursor #width / 2 #height
+movecursor 0 0 - 2 * 45
+setcolor 0.56 0.89 0.31 1
+drawstringnum %score
+setfontfamily Minecraft
+setfontsize %vidheight / 50
+setalign #left #top
+setsize #width / 3 160
+setcursor 0 #height - 18 + 10 + 160 + 2 * 45
+setcolor 0 0 0 0.5
+drawchat 1 1 $whiteimage
+setfontfamily Minecraft
+setfontsize 16 * %vidheight / #height
+if %match_state == #match_state_playtime
+if %team == #team_alpha
+setcursor #width - 1.5 0 - 16 - #height / 2
+movecursor 0 0 - 16
+movecursor 0 - 4 * 16 0
+setalign #left #bottom
+movecursor 0 - 1.5 0 - 0.25 * 16
+setsize 1.5 + 4 * 16 16
+setcolor 0 0 0 0.75
+drawpicbyname $whiteimage
+movecursor 1.5 0.25 * 16
+setcolor 1 1 1 1
+drawstring Stats
+movecursor 0 - 1.5 0 - 0.25 * 16
+setalign #left #top
+setsize 1.5 + 4 * 16 4 * 16
+setcolor 0 0 0 0.5
+drawpicbyname $whiteimage
+setcolor 0.91 0.49 0.51 1
+setcursor #width - 1.5 0 - 16 - #height / 2
+setalign #right #bottom
+drawstringnum %team_alpha_score
+movecursor 0 16
+drawstringnum %team_beta_score
+movecursor 0 16
+drawstatstring %message_alpha
+movecursor 0 16
+drawstatstring %message_beta
+setcolor 1 1 1 1
+setcursor #width - 1.5 0 - 16 - #height / 2
+setalign #left #bottom
+movecursor 0 - 4 * 16 0
+drawstring FOR
+movecursor 0 16
+drawstring ICY
+movecursor 0 16
+drawstring FOR-P
+movecursor 0 16
+drawstring ICY-P
+
+endif
+if %team == #team_beta
+setcursor #width - 1.5 0 - 16 - #height / 2
+movecursor 0 0 - 16
+movecursor 0 - 4 * 16 0
+setalign #left #bottom
+movecursor 0 - 1.5 0 - 0.25 * 16
+setsize 1.5 + 4 * 16 16
+setcolor 0 0 0 0.75
+drawpicbyname $whiteimage
+movecursor 1.5 0.25 * 16
+setcolor 1 1 1 1
+drawstring Stats
+movecursor 0 - 1.5 0 - 0.25 * 16
+setalign #left #top
+setsize 1.5 + 4 * 16 4 * 16
+setcolor 0 0 0 0.5
+drawpicbyname $whiteimage
+setcolor 0.91 0.49 0.51 1
+setcursor #width - 1.5 0 - 16 - #height / 2
+setalign #right #bottom
+drawstringnum %team_beta_score
+movecursor 0 16
+drawstringnum %team_alpha_score
+movecursor 0 16
+drawstatstring %message_beta
+movecursor 0 16
+drawstatstring %message_alpha
+setcolor 1 1 1 1
+setcursor #width - 1.5 0 - 16 - #height / 2
+setalign #left #bottom
+movecursor 0 - 4 * 16 0
+drawstring ICY
+movecursor 0 16
+drawstring FOR
+movecursor 0 16
+drawstring ICY-P
+movecursor 0 16
+drawstring FOR-P
+
+endif
+
+endif
+setalign #left #top
+setsize 32 * 1.333 * %vidheight / %vidwidth 32
+setcursor #width 32
+movecursor 0 - 70 * 1.333 * %vidheight / %vidwidth 0
+drawkeystate jump
+movecursor 0 33
+drawkeystate forward
+movecursor 0 - 32 * 1.333 * %vidheight / %vidwidth 0
+drawkeystate fire
+movecursor 64 * 1.333 * %vidheight / %vidwidth 0
+drawkeystate special
+movecursor 0 33
+drawkeystate right
+movecursor 0 - 32 * 1.333 * %vidheight / %vidwidth 0
+drawkeystate backward
+moveCursor 0 - 32 * 1.333 * %vidheight / %vidwidth 0
+drawkeystate left
+movecursor 32 * 1.333 * %vidheight / %vidwidth 33
+drawkeystate crouch
