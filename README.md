@@ -17,7 +17,7 @@ or another way to get to the same folder:
 [Moxic - rekitrelt](https://github.com/rekitrelt/WarforkHuds/releases/download/Release/moxic-rekitrelt.zip)
 `cg_showspeed 4` or `cg_showspeed 5` for crosshair
 
-[bwHUD - margarinoslv](https://github.com/margarinoslv/bwHUD/raw/main/BWHUD.pk3)
+[bwHUD - margarinoslv](https://github.com/margarinoslv/bwHUD/raw/main/BWHUD.pk3) margarinoslv's [repo](https://github.com/margarinoslv/bwHUD)
 
 [Focus - aru](https://github.com/rekitrelt/WarforkHuds/releases/download/Release/Focus-aru.zip)
 edit `huds/focus.hud` for extra configuration
