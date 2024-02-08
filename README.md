@@ -28,6 +28,8 @@ or another way to get to the same folder:
 
 [Gelmo - Gelmo](https://github.com/Gelmo/warfork-huds/blob/master/hud_gelmo_091.pk3) the pk3 can be opened like a zip or just put in the files [repo](https://github.com/Gelmo/warfork-huds/)
 
+[gauleyhud - gauley](https://github.com/rekitrelt/WarforkHuds/blob/main/gauleyhud/gauleyhud.pk3) `cg_showTimer 2` for the timer/score to be at the bottom 
+
 [ToxicHUD - fakeperson](https://github.com/rekitrelt/WarforkHuds/releases/download/Release/toxicHUD-fakeperson.zip) `cg_showspeed 4` or `cg_showspeed 5` for crosshair
 
 [Minecraft - aru](https://gitlab.com/arutonee/warfork-minecraft-hud/-/raw/main/Minecraft.zip?ref_type=heads) See the [repo](https://gitlab.com/arutonee1/warfork-minecraft-hud) for more info, updates, and customization options
