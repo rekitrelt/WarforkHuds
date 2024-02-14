@@ -65,3 +65,6 @@ or another way to get to the same folder:
 ### Minecraft - aru:
 ![](https://github.com/rekitrelt/WarforkHuds/blob/main/Hud%20previews/Minecraft/1.jpg?raw=true)
 ![](https://github.com/rekitrelt/WarforkHuds/blob/main/Hud%20previews/Minecraft/2.jpg?raw=true)
+### gauleyHud - gauley:
+![](https://github.com/rekitrelt/WarforkHuds/blob/main/Hud%20previews/gauley/1.png?raw=true)
+![](https://github.com/rekitrelt/WarforkHuds/blob/main/Hud%20previews/gauley/2.png?raw=true)
